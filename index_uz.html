@@ -4,9 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The World in 2050</title>
+  <title>Dunyo 2050 yilda</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="assets/logos/logo.ico">
 </head>
 
 <body>
@@ -17,6 +19,7 @@
       <ul>
         <li><a href="index_uz.html">Bosh sahifa</a></li>
         <li><a href="about_uz.html">Haqida</a></li>
+        <li><a href="register_uz.html">Registratsiya</a></li>
         <li class="language-selector">
           <a href="#">Til tanlovi ▾</a>
           <ul class="dropdown">
@@ -31,26 +34,26 @@
   <!-- HERO -->
   <section class="hero" id="home">
     <h2>Dunyo 2050 yilda</h2>
-    <p>Shaping the future through Innovation, Sustainability and Global Collaboration</p>
+    <p>Innovatsiyalar, Barqarorlik va Global hamkorlik orqali kelajakni shakllantirish</p>
     <div class="countdown-container">
       <div class="countdown-item">
         <span id="days"></span>
-        <div class="label">Days</div>
+        <div class="label">Kun</div>
       </div>
       <div class="countdown-item">
         <span id="hours"></span>
-        <div class="label">Hours</div>
+        <div class="label">Soat</div>
       </div>
       <div class="countdown-item">
         <span id="minutes"></span>
-        <div class="label">Mins</div>
+        <div class="label">Minut</div>
       </div>
       <div class="countdown-item">
         <span id="seconds"></span>
-        <div class="label">Secs</div>
+        <div class="label">Soniya</div>
       </div>
       <div>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScQjszJrnDy_D8wnS1j9Nflqxr12qzUlSx82oRPaBzqEU5kpw/viewform?usp=header" class="huge-button">Register Now!</a>
+        <a href="register_uz.html" class="huge-button">Roʻyxatdan oʻting!</a>
       </div>
     </div>
     <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLScQjszJrnDy_D8wnS1j9Nflqxr12qzUlSx82oRPaBzqEU5kpw/viewform?usp=header" class="huge-button">Register Now!</a> -->
@@ -61,135 +64,191 @@
   </section>
 
   <!-- ABOUT -->
-  <section id="about">
+  <section id="about" class="about">
     <h2>Symposium haqida</h2>
-    <p style="max-width:800px; margin:auto; text-align:center;">
-      This international symposium brings together leading thinkers, innovators, and changemakers
-      to imagine what the world will look like in 2050. Join us for inspiring talks, collaborative
-      discussions, and groundbreaking ideas.
+    <p>
+      “Dunyo 2050-yilda” mavzusidagi Xalqaro talabalar simpoziumi Termiz iqtisodiyot va xizmat koʻrsatish universiteti
+      tomonidan oʻtkaziladigan istiqbolli ilmiy tadbirdir. Ushbu ikki kunlik konferentsiya butun dunyo bo'ylab
+      talabalarni 21-asrning o'rtalarida bizning global jamiyatimizni belgilaydigan tendentsiyalar, innovatsiyalar va
+      muammolarni o'rganishga taklif qiladi.
+    </p>
+    <p>
+      Ushbu global akademik tadbir butun dunyo universitetlari talabalarini umumiy kelajagimizning asosiy savollariga
+      javob beradigan g'oyalar, tadqiqotlar va qarashlarni o'rganish va taqdim etishga taklif qiladi. 2050-yilga
+      yaqinlashar ekanmiz, hamma joyda jamiyatlar misli ko‘rilmagan texnologik, ekologik, ijtimoiy va iqtisodiy
+      o‘zgarishlarga duch kelmoqda. Simpoziumning maqsadi yosh ovozlar uchun global suhbatlar va kelgusi o'n yilliklarni
+      shakllantiradigan yechimlarga hissa qo'shish uchun platforma yaratishdir.
+    </p>
+    <p>
+      Biz kelajak innovatsion, barqaror va inklyuziv bo'lishi kerakligiga ishonamiz. Fanlararo muloqot va xalqaro
+      hamkorlik orqali ushbu simpozium talabalarga o'zlari yashamoqchi bo'lgan dunyoni tasavvur qilish va qurishda
+      ishtirok etish imkoniyatini beradi.
+    </p>
+    <br>
+    <p>
+      Tez texnologik transformatsiyalar, atrof-muhit noaniqligi va o'zgaruvchan global dinamika davrida ushbu simpozium
+      yosh olimlar va tadqiqotchilar uchun barqaror, inklyuziv va innovatsion kelajak uchun o'z g'oyalari va
+      qarashlarini taqdim etish uchun platforma taklif qiladi.
+    </p>
+    <p>
+      Tadbir madaniyatlararo almashinuvni, fanlararo muloqotni va insoniyat kelajagiga ta'sir etuvchi real muammolarni
+      hal qiluvchi talabalar tomonidan olib boriladigan tadqiqotlarni rivojlantirishga qaratilgan.
     </p>
   </section>
 
   <!-- TOPICS -->
   <section id="topics">
-    <h2>Key Topics</h2>
+    <h2>Asosiy Mavzular</h2>
     <div class="topics">
       <div class="card">
         <img src="./assets/images/tech-and-inno.jpg" alt="Technology and Innovation: Designing the future we want">
-        <h3>Technology and Innovation: Designing the future we want</h3>
+        <h3>Texnologiya va innovatsiyalar: biz xohlagan kelajakni loyihalash</h3>
         <ul>
-          <li>Artificial Intelligence and the Transformation of Human Communication and Connectivity</li>
-          <li>From Smart Cities to Smart Societies: New Models of Digital Urban Development</li>
-          <li>The Role of Youth in Driving Innovation and Technological Progress</li>
-          <li>Cybersecurity in 2050: Protecting Human Dignity, Privacy and Trust in the Digital Era</li>
+          <li>Sun'iy intellekt va inson aloqasi va ulanishining o'zgarishi</li>
+          <li>Aqlli shaharlardan aqlli jamiyatlarga: raqamli shahar rivojlanishining yangi modellari</li>
+          <li>Innovatsiyalar va texnologik taraqqiyotda yoshlarning roli</li>
+          <li>2050 yilda kiberxavfsizlik: raqamli davrda inson qadr-qimmati, shaxsiy hayoti va ishonchini himoya qilish
+          </li>
         </ul>
       </div>
 
       <div class="card">
-        <img src="./assets/images/env-and-sustain.jpg" alt="Environment and Sustainability: Building a greener tomorrow">
-        <h3>Environment and Sustainability: Building a greener tomorrow</h3>
+        <img src="./assets/images/env-and-sustain.jpg"
+          alt="Environment and Sustainability: Building a greener tomorrow">
+        <h3>Atrof-muhit va barqarorlik: ertangi kunni yanada yashil qilish</h3>
         <ul>
-          <li>Innovations in Renewable Energy and Their Role in Global Energy Transitions</li>
-          <li>Strategies for Climate Change Adaptation and Building Resilient Communities</li>
-          <li>Sustainable Agriculture and Food Security for a Growing Global Population</li>
-          <li>Youth Engagement and Innovation in Advancing Global Sustainability</li>
+          <li>Qayta tiklanadigan energetika sohasidagi innovatsiyalar va ularning global energiya o'tishdagi roli</li>
+          <li>Iqlim o'zgarishiga moslashish va barqaror jamiyatlarni qurish strategiyalari</li>
+          <li>Barqaror qishloq xo'jaligi va o'sib borayotgan global aholi uchun oziq-ovqat xavfsizligi</li>
+          <li>Global barqarorlikni rivojlantirishda yoshlarning faolligi va innovatsiyalari</li>
         </ul>
       </div>
 
       <div class="card">
-        <img src="./assets/images/edu-and-employ.jpg" alt="Education and Employment in an AI-Driven World: Building a resilient future">
-        <h3>Education and Employment in an AI-Driven World: Building a resilient future</h3>
+        <img src="./assets/images/edu-and-employ.jpg"
+          alt="Education and Employment in an AI-Driven World: Building a resilient future">
+        <h3>Sun'iy intellektga asoslangan dunyoda ta'lim va bandlik: mustahkam kelajakni qurish</h3>
         <ul>
-          <li>Artificial Intelligence in Education: Teaching, Learning and Human-AI Collaboration</li>
-          <li>The Changing Role of Teachers in AI-Augmented Classrooms</li>
-          <li>Developing Future-Ready Skills through Emerging Educational Technologies</li>
-          <li>Artificial Intelligence, the Future of Work and New Employment Paradigms</li>
+          <li>Ta'limda sun'iy intellekt: o'qitish, o'rganish va inson-SI hamkorligi</li>
+          <li>AI bilan kengaytirilgan sinflarda o'qituvchilarning o'zgaruvchan roli</li>
+          <li>Rivojlanayotgan ta'lim texnologiyalari orqali kelajakka tayyor ko'nikmalarni rivojlantirish</li>
+          <li>Sun'iy intellekt, ish kelajagi va yangi bandlik paradigmalari</li>
         </ul>
       </div>
 
       <div class="card">
         <img src="./assets/images/health-and-soc.png" alt="Health and Society: Caring for the future">
-        <h3>Health and Society: Caring for the future</h3>
+        <h3>Salomatlik va jamiyat: kelajakka g'amxo'rlik</h3>
         <ul>
-          <li>Mental Health in 2050: Anticipating Emerging Challenges and Solutions</li>
-          <li>Strengthening Community and Social Support as Foundations of Future Healthcare</li>
-          <li>Health Education as a Tool for Empowerment and Sustainable Well-Being</li>
-          <li>Artificial Intelligence in Therapy, Virtual Hospitals and Telemedicine</li>
+          <li>2050 yilda ruhiy salomatlik: paydo bo'lgan muammolar va echimlarni kutish</li>
+          <li>Kelajakdagi sog'liqni saqlash asoslari sifatida jamoatchilik va ijtimoiy yordamni mustahkamlash</li>
+          <li>Sog'liqni saqlash ta'limi imkoniyatlarni kengaytirish va barqaror farovonlik vositasi sifatida</li>
+          <li>Terapiya, virtual kasalxonalar va telemeditsinada sun'iy intellekt</li>
         </ul>
       </div>
 
       <div class="card">
-        <img src="./assets/images/tourism-and-global.avif" alt="Tourism and Global Mobility: Exploring the future of travel">
-        <h3>Tourism and Global Mobility: Exploring the future of travel</h3>
+        <img src="./assets/images/tourism-and-global.avif"
+          alt="Tourism and Global Mobility: Exploring the future of travel">
+        <h3>Turizm va global mobillik: sayohat kelajagini o'rganish</h3>
         <ul>
-          <li>Sustainable and Responsible Tourism as a Driver of Global Development</li>
-          <li>Borderless Travel: Technology, Identity and the Future of Mobility</li>
-          <li>Tourism, Job Creation and Inequality in the Global Economy</li>
-          <li>Climate Change and the Future of Tourism: Adapting to a Changing Planet</li>
+          <li>Barqaror va mas'uliyatli turizm global rivojlanishning drayveri sifatida</li>
+          <li>Chegarasiz sayohat: texnologiya, o'ziga xoslik va mobillikning kelajagi</li>
+          <li>Turizm, ish o'rinlari yaratish va global iqtisodiyotdagi tengsizlik</li>
+          <li>Iqlim o'zgarishi va turizm kelajagi: o'zgaruvchan sayyoraga moslashish</li>
         </ul>
       </div>
 
       <div class="card">
-        <img src="./assets/images/economy-and-poverty.avif" alt="Inclusive Economy and Poverty Reduction: Building shared prosperity">
-        <h3>Inclusive Economy and Poverty Reduction: Building shared prosperity</h3>
+        <img src="./assets/images/economy-and-poverty.avif"
+          alt="Inclusive Economy and Poverty Reduction: Building shared prosperity">
+        <h3>Inklyuziv iqtisodiyot va qashshoqlikni kamaytirish: umumiy farovonlikni mustahkamlash</h3>
         <ul>
-          <li>Global Inequality in 2050: Addressing Disparities Between and Within Nations</li>
-          <li>Decent Work, Social Protection and Pathways Out of Poverty</li>
-          <li>Digital Economy, Financial Inclusion and Access to Opportunities</li>
-          <li>The Role of Women, Youth and Vulnerable Groups in the Future Economy</li>
-          <li>Poverty, Migration and Global Stability in the Twenty-First Century</li>
+          <li>2050 yilda global tengsizlik: Millatlar o'rtasidagi va ichidagi tafovutlarni bartaraf etish</li>
+          <li>Munosib mehnat, ijtimoiy himoya va qashshoqlikdan chiqish yo‘llari</li>
+          <li>Raqamli iqtisodiyot, moliyaviy inklyuziya va imkoniyatlardan foydalanish</li>
+          <li>Kelajak iqtisodiyotida ayollar, yoshlar va ijtimoiy himoyaga muhtoj qatlamlarning roli</li>
+          <li>Yigirma birinchi asrda qashshoqlik, migratsiya va global barqarorlik</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- SPEAKERS -->
-  <section id="speakers">
-    <h2>Speakers</h2>
-    <div class="speakers">
+  <!-- PARTNERS -->
+  <section id="partners">
+    <h2>Hamkorlar</h2>
+    <div class="partners">
       <div class="card">
-        <img src="./assets/images/blank-avatar.webp" alt="Speaker 1">
-        <h3>Speaker 1</h3>
+        <img src="./assets/logos/İstanbul_Üniversitesi_Logo.png">
+        <h3>Istanbul University</h3>
       </div>
       <div class="card">
-        <img src="./assets/images/blank-avatar.webp" alt="Speaker 2">
-        <h3>Speaker 2</h3>
+        <img src="./assets/logos/azer-eco.avif">
+        <h3>Azerbaijan State University of Economics</h3>
       </div>
       <div class="card">
-        <img src="./assets/images/blank-avatar.webp" alt="Speaker 3">
-        <h3>Speaker 3</h3>
+        <img src="./assets/logos/pendidikan.jpg">
+        <h3>Universitas Pendidikan Indonesia</h3>
       </div>
       <div class="card">
-        <img src="./assets/images/blank-avatar.webp" alt="Speaker 4">
-        <h3>Speaker 4</h3>
+        <img src="./assets/logos/brit-coun.webp">
+        <h3>British Council</h3>
+      </div>
+      <div class="card">
+        <img src="./assets/logos/erasmus+.webp">
+        <h3>Erasmus+</h3>
+      </div>
+      <div class="card">
+        <img src="./assets/logos/medipol.png">
+        <h3>MediPol University</h3>
+      </div>
+      <div class="card">
+        <img src="./assets/logos/Hacettepe_Üniversitesi_logo.svg.png">
+        <h3>Hacettepe University</h3>
+      </div>
+      <div class="card">
+        <img src="./assets/logos/Kocaeli-logo.png">
+        <h3>Kocaeli University</h3>
+      </div>
+      <div class="card">
+        <img src="./assets/logos/eiasm.png">
+        <h3>European Institute of Applied Science and Management</h3>
+      </div>
+      <div class="card">
+        <img src="./assets/logos/Kocaeli_health_technology_uni_Logo.png">
+        <h3>Kocaeli Health and Technology University</h3>
+      </div>
+      <div class="card">
+        <img src="./assets/logos/kinjo-gakuin.jpg">
+        <h3>Kinjo Gakuin University</h3>
+      </div>
+      <div class="card">
+        <img src="./assets/logos/soka.png">
+        <h3>Soka University</h3>
+      </div>
+      <div class="card">
+        <img src="./assets/logos/Toyo_University_logo.png">
+        <h3>Toyo University</h3>
+      </div>
+      <div class="card">
+        <img src="./assets/logos/Waseda_University_Logo.svg.png">
+        <h3>Waseda University</h3>
       </div>
     </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="5" placeholder="Message"></textarea>
-      <button type="submit">Send</button>
-    </form>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2025 The World in 2050 Conference. All Rights Reserved.</p>
+    <h3>© 2025 The World in 2050 Symposium. All Rights Reserved.</h3>
+    <div class="social-links">
+      <h3>Bizni kuzatib boring:</h3>
+      <a href="https://m.facebook.com/groups/1309075593063716/?ref=share&mibextid=S66gvF" target="_blank"
+        class="social-icon facebook"></a>
+      <a href="https://instagram.com/tisu.uz?igshid=YmMyMTA2M2Y=" target="_blank" class="social-icon instagram"></a>
+      <a href="https://t.me/tisu_2022" target="_blank" class="social-icon telegram"></a>
+      <a href="https://youtube.com/@termiz_isu" target="_blank" class="social-icon youtube"></a>
+    </div>
   </footer>
-
-  <!-- JS (optional) -->
-  <script>
-    // Simple form handling (prevent refresh)
-    document.querySelector("form").addEventListener("submit", e => {
-      e.preventDefault();
-      alert("Message sent! (demo only)");
-    });
-  </script>
 </body>
 
 </html>

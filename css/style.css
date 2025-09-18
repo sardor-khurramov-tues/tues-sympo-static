@@ -29,23 +29,24 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
+    padding: 30px 100px;
     z-index: 1000;
 }
 
 header h1 {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
 }
 
 nav ul {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     list-style: none;
 }
 
 nav a {
     color: #fff;
+    font-size: 20px;
     font-weight: 500;
     transition: color 0.3s;
 }
@@ -104,7 +105,7 @@ nav a:hover {
 }
 
 .hero h2 {
-    font-size: 50px;
+    font-size: 60px;
     margin-bottom: 15px;
 }
 
@@ -132,63 +133,45 @@ nav a:hover {
 /* --- REGISTRATION BUTTON --- */
 .huge-button {
     display: inline-block;
-    /* Makes the anchor tag behave like a block element, allowing us to set width and padding. */
     padding: 20px 40px;
-    /* Adjust padding to control the size of the button. */
     background-color: #4fd1c5;
-    /* A pleasant green color. */
     color: white;
-    /* White text color. */
     text-align: center;
     text-decoration: none;
-    /* Removes the default underline from the link. */
     font-size: 24px;
-    /* Makes the text large. */
     font-weight: bold;
     border-radius: 25px;
-    /* Adds rounded corners for a softer look. */
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    /* Adds a shadow for a 3D effect. */
     transition: background-color 0.3s, transform 0.3s;
-    /* Smooth transition for hover effects. */
     cursor: pointer;
-    /* Changes the cursor to a pointer on hover. */
     margin: 20px 10px;
 }
 
 .huge-button:hover {
     background-color: #38a89d;
-    /* Darker green on hover. */
     transform: translateY(-2px);
-    /* Lifts the button slightly on hover. */
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25), 0 8px 25px 0 rgba(0, 0, 0, 0.22);
 }
 
 .huge-button:active {
     background-color: #38a89d;
-    /* Even darker green when clicked. */
     transform: translateY(0);
-    /* Pushes the button down to simulate a click. */
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* --- COUNTDOWN --- */
 .countdown-container {
     display: flex;
-    /* Arranges the items in a row */
     justify-content: center;
-    /* Centers the items horizontally */
     font-family: sans-serif;
     text-align: center;
     margin-bottom: 30px;
     gap: 30px;
-    /* Adds space between each countdown item */
 }
 
 .countdown-item {
     display: flex;
     flex-direction: column;
-    /* Stacks the number above the label */
     align-items: center;
 }
 
@@ -224,10 +207,15 @@ section ul {
     margin-left: 20px;
 }
 
-.topics,
-.speakers {
+.topics {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 30px;
+}
+
+.partners {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
@@ -257,8 +245,15 @@ section ul {
     color: #333;
 }
 
-/* --- CONTACT --- */
-.contact form {
+/* --- REGISTER --- */
+.register h3 {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.register form {
     max-width: 600px;
     margin: 0 auto;
     display: flex;
@@ -266,15 +261,15 @@ section ul {
     gap: 15px;
 }
 
-.contact input,
-.contact textarea {
+.register input,
+.register textarea {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 16px;
 }
 
-.contact button {
+.register button {
     background: #4fd1c5;
     color: #fff;
     border: none;
@@ -285,7 +280,7 @@ section ul {
     transition: background 0.3s;
 }
 
-.contact button:hover {
+.register button:hover {
     background: #38a89d;
 }
 
@@ -296,6 +291,44 @@ footer {
     text-align: center;
     padding: 20px;
     font-size: 14px;
+    position: relative;
+}
+
+footer .social-links {
+    margin-top: 10px;
+}
+
+footer .social-icon {
+    text-decoration: none;
+    color: #aaa;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+footer .social-icon:hover {
+    transform: scale(1.2);
+    color: #fff;
+}
+
+footer .social-icon.facebook:before {
+    content: '\f09a';
+    font-family: 'FontAwesome';
+}
+
+footer .social-icon.instagram:before {
+    content: '\f16d';
+    font-family: 'FontAwesome';
+}
+
+footer .social-icon.telegram:before {
+    content: '\f2c6';
+    font-family: 'FontAwesome';
+}
+
+footer .social-icon.youtube:before {
+    content: '\f167';
+    font-family: 'FontAwesome';
 }
 
 /* --- RESPONSIVE --- */
@@ -311,4 +344,29 @@ footer {
     section {
         padding: 60px 20px;
     }
+}
+
+/* --- ABOUT PAGE --- */
+.about {
+    padding-top: 120px;
+}
+
+.about h3 {
+    padding: 10px 30px;
+    font-size: 30px;
+}
+
+.about h4 {
+    padding: 10px 30px;
+    font-size: 20px;
+}
+
+.about ul {
+    list-style-type: disc;
+    text-align: left;
+    margin: 0 40px;
+}
+
+.about li {
+    padding: 5px;
 }
