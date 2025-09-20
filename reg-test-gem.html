@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symposium Registration</title>
+</head>
+<body>
+
+    <h1>Attendee Registration</h1>
+
+    <form id="attendeeForm">
+        <label for="firstName">First Name:</label><br>
+        <input type="text" id="firstName" name="firstName" required maxlength="63"><br><br>
+
+        <label for="lastName">Last Name:</label><br>
+        <input type="text" id="lastName" name="lastName" required maxlength="63"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required maxlength="127"><br><br>
+
+        <label for="phone">Phone:</label><br>
+        <input type="text" id="phone" name="phone" required maxlength="15"><br><br>
+
+        <label for="country">Country:</label><br>
+        <input type="text" id="country" name="country" required maxlength="127"><br><br>
+
+        <label for="affiliation">Affiliation:</label><br>
+        <input type="text" id="affiliation" name="affiliation" required maxlength="255"><br><br>
+
+        <label for="jobPosition">Job Position:</label><br>
+        <input type="text" id="jobPosition" name="jobPosition" required maxlength="255"><br><br>
+
+        <label for="degree">Degree:</label><br>
+        <input type="text" id="degree" name="degree" required maxlength="31"><br><br>
+
+        <label for="field">Field of Study/Work:</label><br>
+        <input type="text" id="field" name="field" required maxlength="127"><br><br>
+        
+        <label for="photo">Photo:</label><br>
+        <input type="file" id="photo" name="photo" accept="image/*" required><br><br>
+
+        <label for="presTitle">Presentation Title (Optional):</label><br>
+        <input type="text" id="presTitle" name="presTitle" maxlength="127"><br><br>
+
+        <label for="presAbstract">Presentation Abstract (Optional):</label><br>
+        <textarea id="presAbstract" name="presAbstract" rows="5" cols="40" maxlength="2000"></textarea><br><br>
+        
+        <label for="comments">Comments (Optional):</label><br>
+        <textarea id="comments" name="comments" rows="5" cols="40" maxlength="2000"></textarea><br><br>
+        
+        <button type="submit">Register</button>
+    </form>
+
+    <dialog id="responseModal">
+        <p id="modalMessage"></p>
+        <button id="closeModalBtn">Close</button>
+    </dialog>
+
+    <script>
+        const form = document.getElementById('attendeeForm');
+        const modal = document.getElementById('responseModal');
+        const modalMessage = document.getElementById('modalMessage');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+
+        form.addEventListener('submit', async (event) => {
+            // Prevent the default form submission which causes a page reload
+            event.preventDefault();
+
+            // Create a FormData object from the form. This will correctly handle multipart/form-data
+            const formData = new FormData(form);
+            
+            try {
+                const response = await fetch('http://localhost:8900/sympo/attendee', {
+                    method: 'POST',
+                    // When using FormData with fetch, you DO NOT set the Content-Type header manually.
+                    // The browser automatically sets it to multipart/form-data with the correct boundary.
+                    body: formData,
+                });
+
+                const result = await response.json();
+
+                // Display the message from the backend response in the modal
+                modalMessage.textContent = result.message;
+                modal.showModal();
+
+            } catch (error) {
+                // Handle network errors or if the server is down
+                console.error('Submission failed:', error);
+                modalMessage.textContent = 'An error occurred. Please try again later.';
+                modal.showModal();
+            }
+        });
+
+        // Add event listener to the close button inside the modal
+        closeModalBtn.addEventListener('click', () => {
+            modal.close();
+        });
+    </script>
+
+</body>
+</html>

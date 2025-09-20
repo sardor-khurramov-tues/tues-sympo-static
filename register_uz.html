@@ -33,22 +33,76 @@
   <!-- REGISTER -->
   <section id="register" class="register">
     <h3>Registratsiya</h3>
-    <form>
-      <h4>Shaxsiy ma'lumotlar</h4>
-      <input id="firstName" type="text" placeholder="Ism" required>
-      <input id="lastName" type="text" placeholder="Familiya" required>
-      <input id="phone" type="tel" placeholder="Telefon raqami" required>
-      <input id="email" type="email" placeholder="Email" required>
 
-      <h4>Simposium tafsilotlari</h4>
-      <textarea id="topic" name="topic" rows="5"
-        placeholder="Taqdimot uchun mavzu (masalan: Sun'iy Intellekt, Zamonaviy Pedagogika, Iqlimshunoslik...)"></textarea>
+    <form id="attendeeForm">
+      <label for="firstName">Ism:</label>
+      <input type="text" id="firstName" name="firstName" required maxlength="63">
 
-      <textarea id="comments" name="comments" rows="3" placeholder="Qo'shimcha sharhlar"></textarea>
-      <button type="submit">Yuborish</button>
+      <label for="lastName">Familiya:</label>
+      <input type="text" id="lastName" name="lastName" required maxlength="63">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required maxlength="127">
+
+      <label for="phone">Telefon:</label>
+      <input type="text" id="phone" name="phone" required maxlength="15">
+
+      <label for="country">Mamlakat:</label>
+      <input type="text" id="country" name="country" required maxlength="127">
+
+      <label for="affiliation">Dargoh (Universitet/Tashkilot):</label>
+      <input type="text" id="affiliation" name="affiliation" required maxlength="255">
+
+      <label for="jobPosition">Lavozim:</label>
+      <input type="text" id="jobPosition" name="jobPosition" required maxlength="255">
+
+      <label for="degree">Ilmiy daraja:</label>
+      <input type="text" id="degree" name="degree" required maxlength="31">
+
+      <label for="field">O'qish/Ish sohasi:</label>
+      <input type="text" id="field" name="field" required maxlength="127">
+
+      <label for="photo">Rasm:</label>
+      <input type="file" id="photo" name="photo" accept="image/*" required>
+
+      <label for="presTitle">Taqdimot nomi (ixtiyoriy):</label>
+      <input type="text" id="presTitle" name="presTitle" maxlength="127">
+
+      <label for="presAbstract">Taqdimot abstrakti (ixtiyoriy):</label>
+      <textarea id="presAbstract" name="presAbstract" rows="5" cols="40" maxlength="2000"></textarea>
+
+      <label for="comments">Izohlar (ixtiyoriy):</label>
+      <textarea id="comments" name="comments" rows="5" cols="40" maxlength="2000"></textarea>
+
+      <button type="submit">Kiritish</button>
     </form>
   </section>
   <br><br>
+
+    <script>
+        const form = document.getElementById('attendeeForm');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+            
+            try {
+                const response = await fetch('http://localhost:8900/sympo/attendee', {
+                    method: 'POST',
+                    body: formData,
+                });
+
+                const result = await response.json();
+
+                alert(result.message);
+
+            } catch (error) {
+                console.error('Submission failed:', error);
+                alert('An error occurred. Please try again later.');
+            }
+        });
+    </script>
 
   <!-- FOOTER -->
   <footer>
