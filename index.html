@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The World in 2050</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
+  <script src="js/counter_script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="icon" type="image/x-icon" href="assets/logos/logo.ico">
 </head>
@@ -33,30 +33,30 @@
 
   <!-- HERO -->
   <section class="hero" id="home">
+    <h2>INTERNATIONAL STUDENT SYMPOSIUM:</h2>
     <h2>The World in 2050</h2>
     <p>Shaping the future through Innovation, Sustainability and Global Collaboration</p>
     <div class="countdown-container">
       <div class="countdown-item">
-        <span id="days"></span>
+        <span id="days">0</span>
         <div class="label">Days</div>
       </div>
       <div class="countdown-item">
-        <span id="hours"></span>
+        <span id="hours">0</span>
         <div class="label">Hours</div>
       </div>
       <div class="countdown-item">
-        <span id="minutes"></span>
+        <span id="minutes">0</span>
         <div class="label">Mins</div>
       </div>
       <div class="countdown-item">
-        <span id="seconds"></span>
+        <span id="seconds">0</span>
         <div class="label">Secs</div>
       </div>
       <div>
         <a href="register_en.html" class="huge-button">Register Now!</a>
       </div>
     </div>
-    <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLScQjszJrnDy_D8wnS1j9Nflqxr12qzUlSx82oRPaBzqEU5kpw/viewform?usp=header" class="huge-button">Register Now!</a> -->
     <br>
     <!-- <button onclick="document.querySelector('#about').scrollIntoView({behavior:'smooth'})">
       Learn More
@@ -67,21 +67,20 @@
   <section id="about" class="about">
     <h2>About the Symposium</h2>
     <p>
-      The International Student Symposium titled “The World in 2050” is a forward-looking academic event organized by
-      Termiz University of Economics and Services. This two-day conference invites students from around the world to
-      explore the trends, innovations, and challenges that will define our global society by the mid-21st century.
+      Termez University of Economics and Service is proud to host an international student symposium titled <strong>"The
+        World in 2050"</strong> a dynamic event bringing together young minds from across the globe to explore the
+      challenges and opportunities that lie ahead.
     </p>
+    <br>
     <p>
-      This global academic event invites students from universities around the world to explore and present ideas,
-      research, and visions that address the major questions of our shared future. As we approach 2050, societies
-      everywhere face unprecedented technological, environmental, social, and economic transformations. The aim of the
-      symposium is to provide a platform for young voices to contribute to global conversations and solutions that will
-      shape the decades to come.
+      As we move toward an increasingly interconnected and complex future, this symposium provides a platform for
+      forward-thinking students to share research, exchange ideas, and inspire action on the issues that will transform
+      our world over the next 25 years.
     </p>
+    <br>
     <p>
-      We believe the future must be innovative, sustainable, and inclusive. Through interdisciplinary dialogue and
-      international collaboration, this symposium empowers students to take part in imagining and building the world
-      they want to live in.
+      We invite students from all disciplines to join us in envisioning a better tomorrow, through critical dialogue,
+      creative presentations, and global collaboration.
     </p>
     <br>
     <p>
@@ -89,10 +88,32 @@
       symposium offers a platform for young scholars and researchers to contribute their ideas and visions for a
       sustainable, inclusive, and innovative future.
     </p>
+    <br>
     <p>
       The event aims to foster cross-cultural exchange, interdisciplinary dialogue, and student-led research that
       addresses real-world issues affecting the future of humanity.
     </p>
+
+    <a href="about_en.html">
+      <button>Read More</button>
+    </a>
+
+    <div class="symposium-info">
+      <div class="info-item">
+        <span class="icon"><i class="fas fa-calendar-alt"></i></span>
+        <div class="text">
+          <h3>Date</h3>
+          <p>November 21–22, 2025</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+        <div class="text">
+          <h3>Location</h3>
+          <p>Termez University of Economics and Service, Uzbekistan</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- TOPICS -->
@@ -100,137 +121,146 @@
     <h2>Key Topics</h2>
     <div class="topics">
       <div class="card">
-        <img src="./assets/images/tech-and-inno.jpg" alt="Technology and Innovation: Designing the future we want">
-        <h3>Technology and Innovation: Designing the future we want</h3>
+        <img src="./assets/images/tech-and-inno.jpg">
+        <h3>Technology and Innovation: Transforming the Future We want</h3>
         <ul>
-          <li>Artificial Intelligence and the Transformation of Human Communication and Connectivity</li>
-          <li>From Smart Cities to Smart Societies: New Models of Digital Urban Development</li>
-          <li>The Role of Youth in Driving Innovation and Technological Progress</li>
-          <li>Cybersecurity in 2050: Protecting Human Dignity, Privacy and Trust in the Digital Era</li>
+          <li>The Future of Communication: AI, Language, and Connection</li>
+          <li>Youth and the Future of Innovation</li>
+          <li>Cybersecurity in 2050</li>
+          <li>The Role of Computer Science in Achieving the UN Sustainable Development Goals</li>
         </ul>
       </div>
 
       <div class="card">
-        <img src="./assets/images/env-and-sustain.jpg"
-          alt="Environment and Sustainability: Building a greener tomorrow">
-        <h3>Environment and Sustainability: Building a greener tomorrow</h3>
+        <img src="./assets/images/env-and-sustain.jpg">
+        <h3>Environment and Sustainability: Building a Greener Tomorrow</h3>
         <ul>
-          <li>Innovations in Renewable Energy and Their Role in Global Energy Transitions</li>
-          <li>Strategies for Climate Change Adaptation and Building Resilient Communities</li>
-          <li>Sustainable Agriculture and Food Security for a Growing Global Population</li>
-          <li>Youth Engagement and Innovation in Advancing Global Sustainability</li>
+          <li>Innovations in Renewable Energy</li>
+          <li>Climate Change Adaptation: Strategies for Resilient Communities</li>
+          <li>Sustainable Agriculture and Food Security in 2050</li>
+          <li>Youth Activism and Innovation in Sustainability</li>
+          <li>From Smart Cities to Smart Societies</li>
         </ul>
       </div>
 
       <div class="card">
-        <img src="./assets/images/edu-and-employ.jpg"
-          alt="Education and Employment in an AI-Driven World: Building a resilient future">
-        <h3>Education and Employment in an AI-Driven World: Building a resilient future</h3>
+        <img src="./assets/images/edu-and-employ.jpg">
+        <h3>Education and Employment in an AI-Driven World</h3>
         <ul>
-          <li>Artificial Intelligence in Education: Teaching, Learning and Human-AI Collaboration</li>
-          <li>The Changing Role of Teachers in AI-Augmented Classrooms</li>
-          <li>Developing Future-Ready Skills through Emerging Educational Technologies</li>
-          <li>Artificial Intelligence, the Future of Work and New Employment Paradigms</li>
+          <li>Rethinking the Role of Teachers in an AI-augmented classroom</li>
+          <li>Future-Ready with AI</li>
+          <li>Learning and Working Smarter: AI in 2050</li>
+          <li>Shaping Minds and Careers</li>
         </ul>
       </div>
 
       <div class="card">
-        <img src="./assets/images/health-and-soc.png" alt="Health and Society: Caring for the future">
-        <h3>Health and Society: Caring for the future</h3>
+        <img src="./assets/images/health-and-soc.png">
+        <h3>Health and Society: Caring for the Future</h3>
         <ul>
-          <li>Mental Health in 2050: Anticipating Emerging Challenges and Solutions</li>
-          <li>Strengthening Community and Social Support as Foundations of Future Healthcare</li>
-          <li>Health Education as a Tool for Empowerment and Sustainable Well-Being</li>
-          <li>Artificial Intelligence in Therapy, Virtual Hospitals and Telemedicine</li>
+          <li>Mental Health in 2050: New Challenges, New Solutions</li>
+          <li>Aging Populations: Social and Economic Impacts on Healthcare Systems</li>
+          <li>AI Therapists</li>
+          <li>Virtual hospitals and telemedicine</li>
         </ul>
       </div>
 
       <div class="card">
-        <img src="./assets/images/tourism-and-global.avif"
-          alt="Tourism and Global Mobility: Exploring the future of travel">
-        <h3>Tourism and Global Mobility: Exploring the future of travel</h3>
+        <img src="./assets/images/tourism-and-global.avif">
+        <h3>Tourism: Exploring the Future of Travel</h3>
         <ul>
-          <li>Sustainable and Responsible Tourism as a Driver of Global Development</li>
-          <li>Borderless Travel: Technology, Identity and the Future of Mobility</li>
-          <li>Tourism, Job Creation and Inequality in the Global Economy</li>
-          <li>Climate Change and the Future of Tourism: Adapting to a Changing Planet</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <img src="./assets/images/economy-and-poverty.avif"
-          alt="Inclusive Economy and Poverty Reduction: Building shared prosperity">
-        <h3>Inclusive Economy and Poverty Reduction: Building shared prosperity</h3>
-        <ul>
-          <li>Global Inequality in 2050: Addressing Disparities Between and Within Nations</li>
-          <li>Decent Work, Social Protection and Pathways Out of Poverty</li>
-          <li>Digital Economy, Financial Inclusion and Access to Opportunities</li>
-          <li>The Role of Women, Youth and Vulnerable Groups in the Future Economy</li>
-          <li>Poverty, Migration and Global Stability in the Twenty-First Century</li>
+          <li>Trips That Help the Planet</li>
+          <li>The Future of Flying: Green Airplanes</li>
+          <li>Tourism and Global Economics</li>
+          <li>Climate Change and Tourism: Adapting to a Changing Planet</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- PARTNERS -->
-  <section id="partners">
-    <h2>Partners</h2>
-    <div class="partners">
+  <!-- ABOUT US -->
+  <section id="about" class="about">
+
+    <h2>ABOUT US</h2>
+
+    <h3>Termez University of Economics and Service</h3>
+    <h4>An Academic Profile</h4>
+    <p>Termez University of Economics and Service (TUES) is a dynamic and forward-looking higher education institution
+      in Uzbekistan, strategically located in Termez, a city that historically functioned as a cultural and intellectual
+      crossroads of Central Asia. As a private university dedicated to excellence in teaching, research, and community
+      engagement, TUES is committed to preparing future leaders in economics, business, the social sciences, applied
+      sciences, and professional service industries. Since its establishment, the university has strived to combine
+      rigorous academic programs with practice-oriented training, while simultaneously cultivating a global vision
+      through partnerships with distinguished institutions worldwide.</p>
+    <br>
+    <p>TUES now stands as one of the region’s most innovative educational institutions, recognized for integrating local
+      and international perspectives in its curricula, advancing sustainable development practices, and providing its
+      students with opportunities to participate in the international academic community. It is in this spirit of global
+      intellectual exchange that the university hosts the international student symposium entitled “The World in 2050”,
+      where students, academics, and professionals converge to explore challenges and opportunities shaping humanity’s
+      shared future.</p>
+    <a href="about_us_en.html">
+      <button>Read More</button>
+    </a>
+  </section>
+
+  <section>
+    <h2>Committee Members</h2>
+    <div class="committee">
       <div class="card">
-        <img src="./assets/logos/İstanbul_Üniversitesi_Logo.png">
-        <h3>Istanbul University</h3>
+        <img src="./assets/images/blank-avatar.webp">
+        <h3>Pardayev Jamshid Muzaffarovich</h3>
+        <h4>Founder</h4>
+        <h4>Ph.D. of Economics</h4>
       </div>
+
       <div class="card">
-        <img src="./assets/logos/azer-eco.avif">
-        <h3>Azerbaijan State University of Economics</h3>
+        <img src="./assets/images/blank-avatar.webp">
+        <h3>Absamatov Anvar</h3>
+        <h4>Rector</h4>
       </div>
+
       <div class="card">
-        <img src="./assets/logos/pendidikan.jpg">
-        <h3>Universitas Pendidikan Indonesia</h3>
+        <img src="./assets/images/blank-avatar.webp">
+        <h3>Otamurodov Shavkat</h3>
+        <h4>Vice Rector of International Relations</h4>
+        <h4>DSc of Economic Science</h4>
       </div>
-      <div class="card">
-        <img src="./assets/logos/brit-coun.webp">
-        <h3>British Council</h3>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section>
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <div class="info-item">
+        <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+        <div class="text">
+          <h3>Address</h3>
+          <p>Farovon street 4-b, 190111 Termez city, Surkhandarya region, Republic of Uzbekistan</p>
+        </div>
       </div>
-      <div class="card">
-        <img src="./assets/logos/erasmus+.webp">
-        <h3>Erasmus+</h3>
+      <div class="info-item">
+        <span class="icon"><i class="fas fa-phone-alt"></i></span>
+        <div class="text">
+          <h3>Phone</h3>
+          <p>+998 55 452 77 77</p>
+          <p>+998 95 412 07 07</p>
+        </div>
       </div>
-      <div class="card">
-        <img src="./assets/logos/medipol.png">
-        <h3>MediPol University</h3>
+      <div class="info-item">
+        <span class="icon"><i class="fas fa-envelope"></i></span>
+        <div class="text">
+          <h3>Email</h3>
+          <p>university@tues.uz</p>
+        </div>
       </div>
-      <div class="card">
-        <img src="./assets/logos/Hacettepe_Üniversitesi_logo.svg.png">
-        <h3>Hacettepe University</h3>
-      </div>
-      <div class="card">
-        <img src="./assets/logos/Kocaeli-logo.png">
-        <h3>Kocaeli University</h3>
-      </div>
-      <div class="card">
-        <img src="./assets/logos/eiasm.png">
-        <h3>European Institute of Applied Science and Management</h3>
-      </div>
-      <div class="card">
-        <img src="./assets/logos/Kocaeli_health_technology_uni_Logo.png">
-        <h3>Kocaeli Health and Technology University</h3>
-      </div>
-      <div class="card">
-        <img src="./assets/logos/kinjo-gakuin.jpg">
-        <h3>Kinjo Gakuin University</h3>
-      </div>
-      <div class="card">
-        <img src="./assets/logos/soka.png">
-        <h3>Soka University</h3>
-      </div>
-      <div class="card">
-        <img src="./assets/logos/Toyo_University_logo.png">
-        <h3>Toyo University</h3>
-      </div>
-      <div class="card">
-        <img src="./assets/logos/Waseda_University_Logo.svg.png">
-        <h3>Waseda University</h3>
+      <div class="info-item">
+        <span class="icon"><i class="fas fa-globe"></i></span>
+        <div class="text">
+          <h3>Website</h3>
+          <p><a href="https://tues.uz/">https://tues.uz/</a></p>
+        </div>
       </div>
     </div>
   </section>
@@ -240,7 +270,8 @@
     <h3>© 2025 The World in 2050 Symposium. All Rights Reserved.</h3>
     <div class="social-links">
       <h3>Follow us:</h3>
-      <a href="https://m.facebook.com/groups/1309075593063716/?ref=share&mibextid=S66gvF" target="_blank" class="social-icon facebook"></a>
+      <a href="https://m.facebook.com/groups/1309075593063716/?ref=share&mibextid=S66gvF" target="_blank"
+        class="social-icon facebook"></a>
       <a href="https://instagram.com/tisu.uz?igshid=YmMyMTA2M2Y=" target="_blank" class="social-icon instagram"></a>
       <a href="https://t.me/tisu_2022" target="_blank" class="social-icon telegram"></a>
       <a href="https://youtube.com/@termiz_isu" target="_blank" class="social-icon youtube"></a>

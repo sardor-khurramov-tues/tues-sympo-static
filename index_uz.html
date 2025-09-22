@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dunyo 2050 yilda</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
+  <script src="js/counter_script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="icon" type="image/x-icon" href="assets/logos/logo.ico">
 </head>
@@ -33,30 +33,30 @@
 
   <!-- HERO -->
   <section class="hero" id="home">
+    <h2>XALQARO TALABALAR SIMPOZIUMI:</h2>
     <h2>Dunyo 2050 yilda</h2>
     <p>Innovatsiyalar, Barqarorlik va Global hamkorlik orqali kelajakni shakllantirish</p>
     <div class="countdown-container">
       <div class="countdown-item">
-        <span id="days"></span>
+        <span id="days">0</span>
         <div class="label">Kun</div>
       </div>
       <div class="countdown-item">
-        <span id="hours"></span>
+        <span id="hours">0</span>
         <div class="label">Soat</div>
       </div>
       <div class="countdown-item">
-        <span id="minutes"></span>
+        <span id="minutes">0</span>
         <div class="label">Minut</div>
       </div>
       <div class="countdown-item">
-        <span id="seconds"></span>
+        <span id="seconds">0</span>
         <div class="label">Soniya</div>
       </div>
       <div>
         <a href="register_uz.html" class="huge-button">Roʻyxatdan oʻting!</a>
       </div>
     </div>
-    <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLScQjszJrnDy_D8wnS1j9Nflqxr12qzUlSx82oRPaBzqEU5kpw/viewform?usp=header" class="huge-button">Register Now!</a> -->
     <br>
     <!-- <button onclick="document.querySelector('#about').scrollIntoView({behavior:'smooth'})">
       Learn More
@@ -67,22 +67,20 @@
   <section id="about" class="about">
     <h2>Symposium haqida</h2>
     <p>
-      “Dunyo 2050-yilda” mavzusidagi Xalqaro talabalar simpoziumi Termiz iqtisodiyot va xizmat koʻrsatish universiteti
-      tomonidan oʻtkaziladigan istiqbolli ilmiy tadbirdir. Ushbu ikki kunlik konferentsiya butun dunyo bo'ylab
-      talabalarni 21-asrning o'rtalarida bizning global jamiyatimizni belgilaydigan tendentsiyalar, innovatsiyalar va
-      muammolarni o'rganishga taklif qiladi.
+      Termiz Iqtisodiyot va xizmat ko‘rsatish universiteti <strong>“Dunyo 2050-yilda”</strong> mavzusidagi xalqaro
+      talabalar simpoziumiga mezbonlik qilishdan g‘ururlanadi, bu esa butun dunyo bo‘ylab yosh ongni oldinda turgan
+      muammolar va imkoniyatlarni o‘rganish uchun birlashtiradi.
     </p>
+    <br>
     <p>
-      Ushbu global akademik tadbir butun dunyo universitetlari talabalarini umumiy kelajagimizning asosiy savollariga
-      javob beradigan g'oyalar, tadqiqotlar va qarashlarni o'rganish va taqdim etishga taklif qiladi. 2050-yilga
-      yaqinlashar ekanmiz, hamma joyda jamiyatlar misli ko‘rilmagan texnologik, ekologik, ijtimoiy va iqtisodiy
-      o‘zgarishlarga duch kelmoqda. Simpoziumning maqsadi yosh ovozlar uchun global suhbatlar va kelgusi o'n yilliklarni
-      shakllantiradigan yechimlarga hissa qo'shish uchun platforma yaratishdir.
+      Biz tobora o'zaro bog'langan va murakkab kelajak sari harakatlanar ekanmiz, ushbu simpozium ilg'or fikrlaydigan
+      talabalar uchun kelgusi 25 yil ichida dunyomizni o'zgartiradigan muammolar bo'yicha tadqiqotlar almashish, fikr
+      almashish va harakatlarni ilhomlantirish uchun platforma yaratadi.
     </p>
+    <br>
     <p>
-      Biz kelajak innovatsion, barqaror va inklyuziv bo'lishi kerakligiga ishonamiz. Fanlararo muloqot va xalqaro
-      hamkorlik orqali ushbu simpozium talabalarga o'zlari yashamoqchi bo'lgan dunyoni tasavvur qilish va qurishda
-      ishtirok etish imkoniyatini beradi.
+      Biz barcha fanlardan talabalarni tanqidiy muloqot, ijodiy taqdimotlar va global hamkorlik orqali yaxshiroq ertangi
+      kunni tasavvur qilishda bizga qo'shilishga taklif qilamiz.
     </p>
     <br>
     <p>
@@ -90,10 +88,32 @@
       yosh olimlar va tadqiqotchilar uchun barqaror, inklyuziv va innovatsion kelajak uchun o'z g'oyalari va
       qarashlarini taqdim etish uchun platforma taklif qiladi.
     </p>
+    <br>
     <p>
       Tadbir madaniyatlararo almashinuvni, fanlararo muloqotni va insoniyat kelajagiga ta'sir etuvchi real muammolarni
       hal qiluvchi talabalar tomonidan olib boriladigan tadqiqotlarni rivojlantirishga qaratilgan.
     </p>
+
+    <a href="about_uz.html">
+      <button>Ko'proq o'qish</button>
+    </a>
+
+    <div class="symposium-info">
+      <div class="info-item">
+        <span class="icon"><i class="fas fa-calendar-alt"></i></span>
+        <div class="text">
+          <h3>Sana</h3>
+          <p>2025 yil 21-22 noyabr</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+        <div class="text">
+          <h3>Manzil</h3>
+          <p>Termiz Iqtisodiyot va Servis Universiteti, O‘zbekiston</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- TOPICS -->
@@ -101,138 +121,146 @@
     <h2>Asosiy Mavzular</h2>
     <div class="topics">
       <div class="card">
-        <img src="./assets/images/tech-and-inno.jpg" alt="Technology and Innovation: Designing the future we want">
-        <h3>Texnologiya va innovatsiyalar: biz xohlagan kelajakni loyihalash</h3>
+        <img src="./assets/images/tech-and-inno.jpg">
+        <h3>Texnologiya va innovatsiyalar: biz xohlagan kelajakni o'zgartirish</h3>
         <ul>
-          <li>Sun'iy intellekt va inson aloqasi va ulanishining o'zgarishi</li>
-          <li>Aqlli shaharlardan aqlli jamiyatlarga: raqamli shahar rivojlanishining yangi modellari</li>
-          <li>Innovatsiyalar va texnologik taraqqiyotda yoshlarning roli</li>
-          <li>2050 yilda kiberxavfsizlik: raqamli davrda inson qadr-qimmati, shaxsiy hayoti va ishonchini himoya qilish
-          </li>
+          <li>Muloqot kelajagi: AI, til va ulanish</li>
+          <li>Yoshlar va innovatsiyalar kelajagi</li>
+          <li>2050 yilda kiberxavfsizlik</li>
+          <li>BMT Barqaror rivojlanish maqsadlariga erishishda kompyuter fanining roli</li>
         </ul>
       </div>
 
       <div class="card">
-        <img src="./assets/images/env-and-sustain.jpg"
-          alt="Environment and Sustainability: Building a greener tomorrow">
-        <h3>Atrof-muhit va barqarorlik: ertangi kunni yanada yashil qilish</h3>
+        <img src="./assets/images/env-and-sustain.jpg">
+        <h3>Atrof-muhit va barqarorlik: ertangi kunni barpo etish</h3>
         <ul>
-          <li>Qayta tiklanadigan energetika sohasidagi innovatsiyalar va ularning global energiya o'tishdagi roli</li>
-          <li>Iqlim o'zgarishiga moslashish va barqaror jamiyatlarni qurish strategiyalari</li>
-          <li>Barqaror qishloq xo'jaligi va o'sib borayotgan global aholi uchun oziq-ovqat xavfsizligi</li>
-          <li>Global barqarorlikni rivojlantirishda yoshlarning faolligi va innovatsiyalari</li>
+          <li>Qayta tiklanadigan energiya sohasidagi innovatsiyalar</li>
+          <li>Iqlim o'zgarishiga moslashish: chidamli jamoalar uchun strategiyalar</li>
+          <li>2050-yilda barqaror qishloq xo‘jaligi va oziq-ovqat xavfsizligi</li>
+          <li>Barqaror rivojlanishda yoshlar faolligi va innovatsiyalari</li>
+          <li>Aqlli shaharlardan aqlli jamiyatlargacha</li>
         </ul>
       </div>
 
       <div class="card">
-        <img src="./assets/images/edu-and-employ.jpg"
-          alt="Education and Employment in an AI-Driven World: Building a resilient future">
-        <h3>Sun'iy intellektga asoslangan dunyoda ta'lim va bandlik: mustahkam kelajakni qurish</h3>
+        <img src="./assets/images/edu-and-employ.jpg">
+        <h3>AIga asoslangan dunyoda ta'lim va bandlik</h3>
         <ul>
-          <li>Ta'limda sun'iy intellekt: o'qitish, o'rganish va inson-SI hamkorligi</li>
-          <li>AI bilan kengaytirilgan sinflarda o'qituvchilarning o'zgaruvchan roli</li>
-          <li>Rivojlanayotgan ta'lim texnologiyalari orqali kelajakka tayyor ko'nikmalarni rivojlantirish</li>
-          <li>Sun'iy intellekt, ish kelajagi va yangi bandlik paradigmalari</li>
+          <li>AI bilan kengaytirilgan sinfda o'qituvchilarning rolini qayta ko'rib chiqish</li>
+          <li>AI bilan kelajakka tayyor</li>
+          <li>O'rganish va oqilona ishlash: AI 2050 yilda</li>
+          <li>Fikr va martabani shakllantirish</li>
         </ul>
       </div>
 
       <div class="card">
-        <img src="./assets/images/health-and-soc.png" alt="Health and Society: Caring for the future">
+        <img src="./assets/images/health-and-soc.png">
         <h3>Salomatlik va jamiyat: kelajakka g'amxo'rlik</h3>
         <ul>
-          <li>2050 yilda ruhiy salomatlik: paydo bo'lgan muammolar va echimlarni kutish</li>
-          <li>Kelajakdagi sog'liqni saqlash asoslari sifatida jamoatchilik va ijtimoiy yordamni mustahkamlash</li>
-          <li>Sog'liqni saqlash ta'limi imkoniyatlarni kengaytirish va barqaror farovonlik vositasi sifatida</li>
-          <li>Terapiya, virtual kasalxonalar va telemeditsinada sun'iy intellekt</li>
+          <li>2050 yilda ruhiy salomatlik: yangi muammolar, yangi echimlar</li>
+          <li>Aholining qarishi: sog'liqni saqlash tizimiga ijtimoiy va iqtisodiy ta'sir</li>
+          <li>AI terapevtlari</li>
+          <li>Virtual kasalxonalar va teletibbiyot</li>
         </ul>
       </div>
 
       <div class="card">
-        <img src="./assets/images/tourism-and-global.avif"
-          alt="Tourism and Global Mobility: Exploring the future of travel">
-        <h3>Turizm va global mobillik: sayohat kelajagini o'rganish</h3>
+        <img src="./assets/images/tourism-and-global.avif">
+        <h3>Turizm: sayohat kelajagini o'rganish</h3>
         <ul>
-          <li>Barqaror va mas'uliyatli turizm global rivojlanishning drayveri sifatida</li>
-          <li>Chegarasiz sayohat: texnologiya, o'ziga xoslik va mobillikning kelajagi</li>
-          <li>Turizm, ish o'rinlari yaratish va global iqtisodiyotdagi tengsizlik</li>
-          <li>Iqlim o'zgarishi va turizm kelajagi: o'zgaruvchan sayyoraga moslashish</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <img src="./assets/images/economy-and-poverty.avif"
-          alt="Inclusive Economy and Poverty Reduction: Building shared prosperity">
-        <h3>Inklyuziv iqtisodiyot va qashshoqlikni kamaytirish: umumiy farovonlikni mustahkamlash</h3>
-        <ul>
-          <li>2050 yilda global tengsizlik: Millatlar o'rtasidagi va ichidagi tafovutlarni bartaraf etish</li>
-          <li>Munosib mehnat, ijtimoiy himoya va qashshoqlikdan chiqish yo‘llari</li>
-          <li>Raqamli iqtisodiyot, moliyaviy inklyuziya va imkoniyatlardan foydalanish</li>
-          <li>Kelajak iqtisodiyotida ayollar, yoshlar va ijtimoiy himoyaga muhtoj qatlamlarning roli</li>
-          <li>Yigirma birinchi asrda qashshoqlik, migratsiya va global barqarorlik</li>
+          <li>Sayyoraga yordam beradigan sayohatlar</li>
+          <li>Parvoz kelajagi: yashil samolyotlar</li>
+          <li>Turizm va global iqtisodiyot</li>
+          <li>Iqlim o'zgarishi va turizm: o'zgaruvchan sayyoraga moslashish</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- PARTNERS -->
-  <section id="partners">
-    <h2>Hamkorlar</h2>
-    <div class="partners">
+  <!-- ABOUT US -->
+  <section id="about" class="about">
+
+    <h2>BIZ HAQIMIZDA</h2>
+
+    <h3>Termiz Iqtisodiyot va Servis Universiteti</h3>
+    <h4>Akademik profil</h4>
+    <p>Termiz Iqtisodiyot va servis universiteti (TUES) O‘zbekistondagi dinamik va istiqbolli oliy ta’lim muassasasi
+      bo‘lib, strategik jihatdan Termiz shahrida, tarixan Markaziy Osiyoning madaniy va intellektual chorrahasi sifatida
+      faoliyat yuritgan shaharda joylashgan. Ta'lim, tadqiqot va jamoatchilik bilan hamkorlikda mukammallikka
+      bag'ishlangan xususiy universitet sifatida TUES iqtisod, biznes, ijtimoiy fanlar, amaliy fanlar va professional
+      xizmat ko'rsatish sohalarida bo'lajak yetakchilarni tayyorlashga intiladi. Tashkil etilganidan beri universitet
+      qat'iy o'quv dasturlarini amaliyotga yo'naltirilgan ta'lim bilan uyg'unlashtirishga intilib, bir vaqtning o'zida
+      butun dunyo bo'ylab taniqli institutlar bilan hamkorlik qilish orqali global qarashlarni rivojlantirdi.</p>
+    <br>
+    <p>TISU hozirda mintaqadagi eng innovatsion ta’lim muassasalaridan biri bo‘lib, o‘z o‘quv dasturlariga mahalliy va
+      xalqaro istiqbollarni integratsiyalashgani, barqaror rivojlanish amaliyotini ilgari surgani va o‘z talabalariga
+      xalqaro akademik hamjamiyatda ishtirok etish imkoniyatlarini taqdim etgani bilan tan olingan. Aynan shu global
+      intellektual almashinuv ruhida universitet “2050-yilda dunyo” nomli xalqaro talabalar simpoziumiga mezbonlik
+      qiladi, unda talabalar, akademiklar va mutaxassislar insoniyatning umumiy kelajagini shakllantiruvchi muammolar va
+      imkoniyatlarni oʻrganish uchun birlashadilar.</p>
+    <a href="about_us_uz.html">
+      <button>Ko'proq o'qish</button>
+    </a>
+  </section>
+
+  <section>
+    <h2>Qo'mita a'zolari</h2>
+    <div class="committee">
       <div class="card">
-        <img src="./assets/logos/İstanbul_Üniversitesi_Logo.png">
-        <h3>Istanbul University</h3>
+        <img src="./assets/images/blank-avatar.webp">
+        <h3>Pardayev Jamshid Muzaffarovich</h3>
+        <h4>Founder</h4>
+        <h4>Ph.D. of Economics</h4>
       </div>
+
       <div class="card">
-        <img src="./assets/logos/azer-eco.avif">
-        <h3>Azerbaijan State University of Economics</h3>
+        <img src="./assets/images/blank-avatar.webp">
+        <h3>Absamatov Anvar</h3>
+        <h4>Rector</h4>
       </div>
+
       <div class="card">
-        <img src="./assets/logos/pendidikan.jpg">
-        <h3>Universitas Pendidikan Indonesia</h3>
+        <img src="./assets/images/blank-avatar.webp">
+        <h3>Otamurodov Shavkat</h3>
+        <h4>Vice Rector of International Relations</h4>
+        <h4>DSc of Economic Science</h4>
       </div>
-      <div class="card">
-        <img src="./assets/logos/brit-coun.webp">
-        <h3>British Council</h3>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section>
+    <h2>Kontaktlar</h2>
+    <div class="contact-info">
+      <div class="info-item">
+        <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+        <div class="text">
+          <h3>Manzil</h3>
+          <p>190111 O‘zbekiston Respublikasi, Surxondaryo viloyati, Termiz shahri, Farovon ko‘chasi 4-b uy.</p>
+        </div>
       </div>
-      <div class="card">
-        <img src="./assets/logos/erasmus+.webp">
-        <h3>Erasmus+</h3>
+      <div class="info-item">
+        <span class="icon"><i class="fas fa-phone-alt"></i></span>
+        <div class="text">
+          <h3>Telefon</h3>
+          <p>+998 55 452 77 77</p>
+          <p>+998 95 412 07 07</p>
+        </div>
       </div>
-      <div class="card">
-        <img src="./assets/logos/medipol.png">
-        <h3>MediPol University</h3>
+      <div class="info-item">
+        <span class="icon"><i class="fas fa-envelope"></i></span>
+        <div class="text">
+          <h3>Email</h3>
+          <p>university@tues.uz</p>
+        </div>
       </div>
-      <div class="card">
-        <img src="./assets/logos/Hacettepe_Üniversitesi_logo.svg.png">
-        <h3>Hacettepe University</h3>
-      </div>
-      <div class="card">
-        <img src="./assets/logos/Kocaeli-logo.png">
-        <h3>Kocaeli University</h3>
-      </div>
-      <div class="card">
-        <img src="./assets/logos/eiasm.png">
-        <h3>European Institute of Applied Science and Management</h3>
-      </div>
-      <div class="card">
-        <img src="./assets/logos/Kocaeli_health_technology_uni_Logo.png">
-        <h3>Kocaeli Health and Technology University</h3>
-      </div>
-      <div class="card">
-        <img src="./assets/logos/kinjo-gakuin.jpg">
-        <h3>Kinjo Gakuin University</h3>
-      </div>
-      <div class="card">
-        <img src="./assets/logos/soka.png">
-        <h3>Soka University</h3>
-      </div>
-      <div class="card">
-        <img src="./assets/logos/Toyo_University_logo.png">
-        <h3>Toyo University</h3>
-      </div>
-      <div class="card">
-        <img src="./assets/logos/Waseda_University_Logo.svg.png">
-        <h3>Waseda University</h3>
+      <div class="info-item">
+        <span class="icon"><i class="fas fa-globe"></i></span>
+        <div class="text">
+          <h3>Veb-sayt</h3>
+          <p><a href="https://tues.uz/">https://tues.uz/</a></p>
+        </div>
       </div>
     </div>
   </section>

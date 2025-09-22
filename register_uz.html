@@ -79,30 +79,39 @@
   </section>
   <br><br>
 
-    <script>
-        const form = document.getElementById('attendeeForm');
+  <script>
+    const form = document.getElementById('attendeeForm');
 
-        form.addEventListener('submit', async (event) => {
-            event.preventDefault();
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
 
-            const formData = new FormData(form);
-            
-            try {
-                const response = await fetch('http://localhost:8900/sympo/attendee', {
-                    method: 'POST',
-                    body: formData,
-                });
+      const formData = new FormData(form);
 
-                const result = await response.json();
+      const messages = {
+        0: "✅ Roʻyxatdan oʻtish muvaffaqiyatli amalga oshdi!",
+        1: "⚠️ Biz tomonda nimadir noto'g'ri ketdi. Keyinroq qayta urinib ko‘ring.",
+        6: "❌ Fayl juda katta. Maksimal hajmi 5 MB.",
+        7: "❌ Fayl turi yaroqsiz. Iltimos, JPEG/JPG rasm yuklang.",
+        1001: "⚠️ Ushbu email allaqachon ro'yxatdan o'tkazilgan. Iltimos, boshqasini ishlating."
+      };
 
-                alert(result.message);
-
-            } catch (error) {
-                console.error('Submission failed:', error);
-                alert('An error occurred. Please try again later.');
-            }
+      try {
+        const response = await fetch('http://localhost:8900/sympo/attendee', {
+          method: 'POST',
+          body: formData,
         });
-    </script>
+
+        const result = await response.json();
+
+        const message = messages[result.code] || "Xatolik yuz berdi. Keyinroq qayta urinib ko‘ring.";
+        alert(message);
+
+      } catch (error) {
+        console.error('Submission failed:', error);
+        alert('Xatolik yuz berdi. Keyinroq qayta urinib ko‘ring.');
+      }
+    });
+  </script>
 
   <!-- FOOTER -->
   <footer>

@@ -63,7 +63,7 @@
       <input type="text" id="field" name="field" required maxlength="127">
 
       <label for="photo">Photo:</label>
-      <input type="file" id="photo" name="photo" accept="image/*" required>
+      <input type="file" id="photo" name="photo" accept=".jpeg, .jpg" required>
 
       <label for="presTitle">Presentation Title (Optional):</label>
       <input type="text" id="presTitle" name="presTitle" maxlength="127">
@@ -79,36 +79,39 @@
   </section>
   <br><br>
 
-    <script>
-        const form = document.getElementById('attendeeForm');
+  <script>
+    const form = document.getElementById('attendeeForm');
 
-        form.addEventListener('submit', async (event) => {
-            // Prevent the default form submission which causes a page reload
-            event.preventDefault();
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
 
-            // Create a FormData object from the form. This will correctly handle multipart/form-data
-            const formData = new FormData(form);
-            
-            try {
-                const response = await fetch('http://localhost:8900/sympo/attendee', {
-                    method: 'POST',
-                    // When using FormData with fetch, you DO NOT set the Content-Type header manually.
-                    // The browser automatically sets it to multipart/form-data with the correct boundary.
-                    body: formData,
-                });
+      const formData = new FormData(form);
 
-                const result = await response.json();
+      const messages = {
+        0: "✅ Your registration was successful!",
+        1: "⚠️ Something went wrong on our side. Please try again later.",
+        6: "❌ File too large. Maximum size is 5 MB.",
+        7: "❌ Invalid file type. Please upload a JPEG/JPG image.",
+        1001: "⚠️ This email is already registered. Please use another one."
+      };
 
-                // Display the message from the backend response in a simple alert
-                alert(result.message);
-
-            } catch (error) {
-                // Handle network errors or if the server is down
-                console.error('Submission failed:', error);
-                alert('An error occurred. Please try again later.');
-            }
+      try {
+        const response = await fetch('http://localhost:8900/sympo/attendee', {
+          method: 'POST',
+          body: formData,
         });
-    </script>
+
+        const result = await response.json();
+
+        const message = messages[result.code] || "An error occurred. Please try again later.";
+        alert(message);
+
+      } catch (error) {
+        console.error('Submission failed:', error);
+        alert('An error occurred. Please try again later.');
+      }
+    });
+  </script>
 
   <!-- FOOTER -->
   <footer>
