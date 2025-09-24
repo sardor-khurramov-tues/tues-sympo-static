@@ -100,23 +100,26 @@
 
       grecaptcha.ready(async () => {
         try {
-          // 1. Get reCAPTCHA token
           const token = await grecaptcha.execute(
             '6Lf4nNMrAAAAAPXzkOJQSdaYrzC0LCzqxulT1RqS',
             { action: 'attendeeForm' }
           );
 
-          // 2. Put token in hidden input
           document.getElementById('recaptchaToken').value = token;
 
-          // 3. Collect form data
           const formData = new FormData(form);
 
-          // 4. Send request
           const response = await fetch('https://sardorkhurramov.uz/api/attendee', {
             method: 'POST',
             body: formData,
           });
+
+          if (!response.ok) {
+            const errorText = await response.text();
+            console.error("Server responded with error:", errorText);
+            alert("❌ Error: " + errorText);
+            return;
+          }
 
           const result = await response.json();
           const message = messages[result.code] || "An error occurred. Please try again later.";
