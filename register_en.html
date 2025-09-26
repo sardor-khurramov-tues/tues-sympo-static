@@ -112,11 +112,6 @@
             body: formData,
           });
 
-          if (!response.ok) {
-            const errorText = await response.text();
-            console.error("Server responded with error:", errorText);
-          }
-
           const result = await response.json();
           const message = messages[result.code] || "An error occurred. Please try again later.";
           alert(message);
