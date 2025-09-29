@@ -13,7 +13,9 @@
   <link rel="stylesheet" href="css/about.css">
   <link rel="stylesheet" href="css/sympo-info.css">
   <link rel="stylesheet" href="css/section-card.css">
+  <link rel="stylesheet" href="css/topic.css">
   <script src="js/counter_script.js" defer></script>
+  <script src="js/topic_script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="icon" type="image/x-icon" href="assets/logos/logo.ico">
 </head>
@@ -129,63 +131,85 @@
   </section>
 
   <!-- TOPICS -->
-  <section id="topics">
-    <h2>Asosiy Mavzular</h2>
-    <div class="topics">
-      <div class="card">
-        <img src="./assets/images/tech-and-inno.jpg">
-        <h3>Texnologiya va innovatsiyalar: biz xohlagan kelajakni o'zgartirish</h3>
-        <ul>
-          <li>Muloqot kelajagi: AI, til va ulanish</li>
-          <li>Yoshlar va innovatsiyalar kelajagi</li>
-          <li>2050 yilda kiberxavfsizlik</li>
-          <li>BMT Barqaror rivojlanish maqsadlariga erishishda kompyuter fanining roli</li>
-        </ul>
+  <section>
+    <div class="topics-container">
+
+      <div class="topic-nav">
+        <button class="topic-button active" onclick="showTopic('topic1', this)">
+          Texnologiya va innovatsiyalar: biz xohlagan kelajakni o'zgartirish
+        </button>
+        <button class="topic-button" onclick="showTopic('topic2', this)">
+          Atrof-muhit va barqarorlik: ertangi kunni barpo etish
+        </button>
+        <button class="topic-button" onclick="showTopic('topic3', this)">
+          AIga asoslangan dunyoda ta'lim va bandlik
+        </button>
+        <button class="topic-button" onclick="showTopic('topic4', this)">
+          Salomatlik va jamiyat: kelajakka g'amxo'rlik
+        </button>
+        <button class="topic-button" onclick="showTopic('topic5', this)">
+          Turizm: sayohat kelajagini o'rganish
+        </button>
       </div>
 
-      <div class="card">
-        <img src="./assets/images/env-and-sustain.jpg">
-        <h3>Atrof-muhit va barqarorlik: ertangi kunni barpo etish</h3>
-        <ul>
-          <li>Qayta tiklanadigan energiya sohasidagi innovatsiyalar</li>
-          <li>Iqlim o'zgarishiga moslashish: chidamli jamoalar uchun strategiyalar</li>
-          <li>2050-yilda barqaror qishloq xo‘jaligi va oziq-ovqat xavfsizligi</li>
-          <li>Barqaror rivojlanishda yoshlar faolligi va innovatsiyalari</li>
-          <li>Aqlli shaharlardan aqlli jamiyatlargacha</li>
-        </ul>
-      </div>
+      <div class="topic-content-area">
 
-      <div class="card">
-        <img src="./assets/images/edu-and-employ.jpg">
-        <h3>AIga asoslangan dunyoda ta'lim va bandlik</h3>
-        <ul>
-          <li>AI bilan kengaytirilgan sinfda o'qituvchilarning rolini qayta ko'rib chiqish</li>
-          <li>AI bilan kelajakka tayyor</li>
-          <li>O'rganish va oqilona ishlash: AI 2050 yilda</li>
-          <li>Fikr va martabani shakllantirish</li>
-        </ul>
-      </div>
+        <div id="topic1" class="topic-content active">
+          <h2>Texnologiya va innovatsiyalar: <br> biz xohlagan kelajakni o'zgartirish</h2>
+          <img src="./assets/images/Future-Tech-Innovation.png" class="topic-image">
+          <ul>
+            <li>Muloqot kelajagi: AI, til va ulanish</li>
+            <li>Yoshlar va innovatsiyalar kelajagi</li>
+            <li>2050 yilda kiberxavfsizlik</li>
+            <li>BMT Barqaror rivojlanish maqsadlariga erishishda kompyuter fanining roli</li>
+          </ul>
+        </div>
 
-      <div class="card">
-        <img src="./assets/images/health-and-soc.png">
-        <h3>Salomatlik va jamiyat: kelajakka g'amxo'rlik</h3>
-        <ul>
-          <li>2050 yilda ruhiy salomatlik: yangi muammolar, yangi echimlar</li>
-          <li>Aholining qarishi: sog'liqni saqlash tizimiga ijtimoiy va iqtisodiy ta'sir</li>
-          <li>AI terapevtlari</li>
-          <li>Virtual kasalxonalar va teletibbiyot</li>
-        </ul>
-      </div>
+        <div id="topic2" class="topic-content">
+          <h2>Atrof-muhit va barqarorlik: <br> ertangi kunni barpo etish</h2>
+          <img src="./assets/images/Greener-Tomorrow-Vision.png" class="topic-image">
+          <ul>
+            <li>Qayta tiklanadigan energiya sohasidagi innovatsiyalar</li>
+            <li>Iqlim o'zgarishiga moslashish: chidamli jamoalar uchun strategiyalar</li>
+            <li>2050-yilda barqaror qishloq xo‘jaligi va oziq-ovqat xavfsizligi</li>
+            <li>Barqaror rivojlanishda yoshlar faolligi va innovatsiyalari</li>
+            <li>Aqlli shaharlardan aqlli jamiyatlargacha</li>
+          </ul>
+        </div>
 
-      <div class="card">
-        <img src="./assets/images/tourism-and-global.avif">
-        <h3>Turizm: sayohat kelajagini o'rganish</h3>
-        <ul>
-          <li>Sayyoraga yordam beradigan sayohatlar</li>
-          <li>Parvoz kelajagi: yashil samolyotlar</li>
-          <li>Turizm va global iqtisodiyot</li>
-          <li>Iqlim o'zgarishi va turizm: o'zgaruvchan sayyoraga moslashish</li>
-        </ul>
+        <div id="topic3" class="topic-content">
+          <h2>AIga asoslangan dunyoda <br> ta'lim va bandlik</h2>
+          <img src="./assets/images/AI-and-Future-Careers.png" class="topic-image">
+          <ul>
+            <li>AI bilan kengaytirilgan sinfda o'qituvchilarning rolini qayta ko'rib chiqish</li>
+            <li>AI bilan kelajakka tayyor</li>
+            <li>O'rganish va oqilona ishlash: AI 2050 yilda</li>
+            <li>Fikr va martabani shakllantirish</li>
+          </ul>
+        </div>
+
+        <div id="topic4" class="topic-content">
+          <h2>Salomatlik va jamiyat: <br> kelajakka g'amxo'rlik</h2>
+          <img src="./assets/images/Future-Health-Care.png" class="topic-image">
+          <ul>
+            <li>2050 yilda ruhiy salomatlik: yangi muammolar, yangi echimlar</li>
+            <li>Aholining qarishi: sog'liqni saqlash tizimiga ijtimoiy va iqtisodiy ta'sir</li>
+            <li>AI terapevtlari</li>
+            <li>Virtual kasalxonalar va teletibbiyot</li>
+          </ul>
+        </div>
+
+        <div id="topic5" class="topic-content">
+          <h2>Turizm: <br> sayohat kelajagini o'rganish</h2>
+          <img src="./assets/images/Future-of-Tourism.png" class="topic-image">
+          <ul>
+            <li>Sayyoraga yordam beradigan sayohatlar</li>
+            <li>Parvoz kelajagi: yashil samolyotlar</li>
+            <li>Turizm va global iqtisodiyot</li>
+            <li>Iqlim o'zgarishi va turizm: o'zgaruvchan sayyoraga moslashish</li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </section>
