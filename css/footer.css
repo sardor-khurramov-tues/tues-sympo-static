@@ -1,0 +1,46 @@
+/* --- FOOTER --- */
+footer {
+    background: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    position: relative;
+}
+
+footer .social-links {
+    margin-top: 10px;
+}
+
+footer .social-icon {
+    text-decoration: none;
+    color: #aaa;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+footer .social-icon:hover {
+    transform: scale(1.2);
+    color: #fff;
+}
+
+footer .social-icon.facebook:before {
+    content: '\f09a';
+    font-family: 'FontAwesome';
+}
+
+footer .social-icon.instagram:before {
+    content: '\f16d';
+    font-family: 'FontAwesome';
+}
+
+footer .social-icon.telegram:before {
+    content: '\f2c6';
+    font-family: 'FontAwesome';
+}
+
+footer .social-icon.youtube:before {
+    content: '\f167';
+    font-family: 'FontAwesome';
+}

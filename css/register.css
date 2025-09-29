@@ -1,0 +1,42 @@
+/* --- REGISTER --- */
+.register h3 {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.register form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.register input,
+.register textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.register label {
+    margin-top: 12px;
+}
+
+.register button {
+    margin-top: 12px;
+    background: #4fd1c5;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.register button:hover {
+    background: #38a89d;
+}

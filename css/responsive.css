@@ -1,0 +1,14 @@
+/* --- RESPONSIVE --- */
+@media(max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    section {
+        padding: 60px 20px;
+    }
+}

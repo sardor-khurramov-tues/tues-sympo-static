@@ -5,8 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The World in 2050</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/sympo-info.css">
+  <link rel="stylesheet" href="css/section-card.css">
+  <link rel="stylesheet" href="css/topic.css">
   <script src="js/counter_script.js" defer></script>
+  <script src="js/topic_script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="icon" type="image/x-icon" href="assets/logos/logo.ico">
 </head>
@@ -21,10 +30,15 @@
         <li><a href="about_en.html">About</a></li>
         <li><a href="register_en.html">Register</a></li>
         <li class="language-selector">
-          <a href="#">Language ▾</a>
+          <a href="#">
+            <img src="./assets/images/flag_uk.png" alt="English" class="flag-icon" />
+          </a>
           <ul class="dropdown">
-            <li><a href="index.html">English</a></li>
-            <li><a href="index_uz.html">Oʻzbekcha</a></li>
+            <li>
+              <a href="index_uz.html">
+                <img src="./assets/images/flag_uz.png" alt="Oʻzbekcha" class="flag-icon" />
+              </a>
+            </li>
           </ul>
         </li>
       </ul>
@@ -174,6 +188,89 @@
           <li>Tourism and Global Economics</li>
           <li>Climate Change and Tourism: Adapting to a Changing Planet</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="topics-container">
+
+      <div class="topic-nav">
+        <button class="topic-button active" onclick="showTopic('topic1', this)">
+          Technology and Innovation: Transforming the Future We want
+        </button>
+        <button class="topic-button" onclick="showTopic('topic2', this)">
+          Environment and Sustainability: Building a Greener Tomorrow
+        </button>
+        <button class="topic-button" onclick="showTopic('topic3', this)">
+          Education and Employment in an AI-Driven World
+        </button>
+        <button class="topic-button" onclick="showTopic('topic4', this)">
+          Health and Society: Caring for the Future
+        </button>
+        <button class="topic-button" onclick="showTopic('topic5', this)">
+          Tourism: Exploring the Future of Travel
+        </button>
+      </div>
+
+      <div class="topic-content-area">
+
+        <div id="topic1" class="topic-content active">
+          <h2>Technology and Innovation: <br> Transforming the Future We want</h2>
+          <img src="./assets/images/Future-Tech-Innovation.png" class="topic-image">
+          <ul>
+            <li>The Future of Communication: AI, Language, and Connection</li>
+            <li>Youth and the Future of Innovation</li>
+            <li>Cybersecurity in 2050</li>
+            <li>The Role of Computer Science in Achieving the UN Sustainable Development Goals</li>
+          </ul>
+        </div>
+
+        <div id="topic2" class="topic-content">
+          <h2>Environment and Sustainability: <br> Building a Greener Tomorrow</h2>
+          <img src="./assets/images/Greener-Tomorrow-Vision.png" class="topic-image">
+          <ul>
+            <li>Innovations in Renewable Energy</li>
+            <li>Climate Change Adaptation: Strategies for Resilient Communities</li>
+            <li>Sustainable Agriculture and Food Security in 2050</li>
+            <li>Youth Activism and Innovation in Sustainability</li>
+            <li>From Smart Cities to Smart Societies</li>
+          </ul>
+        </div>
+
+        <div id="topic3" class="topic-content">
+          <h2>Education and Employment <br> in an AI-Driven World</h2>
+          <img src="./assets/images/AI-and-Future-Careers.png" class="topic-image">
+          <ul>
+            <li>Rethinking the Role of Teachers in an AI-augmented classroom</li>
+            <li>Future-Ready with AI</li>
+            <li>Learning and Working Smarter: AI in 2050</li>
+            <li>Shaping Minds and Careers</li>
+          </ul>
+        </div>
+
+        <div id="topic4" class="topic-content">
+          <h2>Health and Society: <br> Caring for the Future</h2>
+          <img src="./assets/images/Future-Health-Care.png" class="topic-image">
+          <ul>
+            <li>Mental Health in 2050: New Challenges, New Solutions</li>
+            <li>Aging Populations: Social and Economic Impacts on Healthcare Systems</li>
+            <li>AI Therapists</li>
+            <li>Virtual hospitals and telemedicine</li>
+          </ul>
+        </div>
+
+        <div id="topic5" class="topic-content">
+          <h2>Tourism: <br> Exploring the Future of Travel</h2>
+          <img src="./assets/images/Future-of-Tourism.png" class="topic-image">
+          <ul>
+            <li>Trips That Help the Planet</li>
+            <li>The Future of Flying: Green Airplanes</li>
+            <li>Tourism and Global Economics</li>
+            <li>Climate Change and Tourism: Adapting to a Changing Planet</li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </section>

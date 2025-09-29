@@ -1,0 +1,43 @@
+/* --- SYMPOSIUM INFO --- */
+.symposium-info,
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 20px;
+    /* padding: 10px; */
+    max-width: 800px;
+    margin: auto;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+}
+
+.icon {
+    font-size: 2.5em;
+    margin-right: 15px;
+    color: #4fd1c5;
+}
+
+.info-item h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #555;
+    font-weight: 500;
+}
+
+.info-item p {
+    margin: 5px 0 0;
+    font-size: 1.2em;
+    color: #777;
+}
+
+.info-item i {
+    margin: 10px;
+}

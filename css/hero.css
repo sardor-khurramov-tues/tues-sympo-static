@@ -1,0 +1,96 @@
+/* --- HERO SECTION --- */
+.hero {
+    background: url('../assets/images/hero-background.avif') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 500px;
+    margin-bottom: 15px;
+}
+
+.hero button {
+    padding: 12px 25px;
+    background: #4fd1c5;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.hero button:hover {
+    background: #38a89d;
+}
+
+/* --- REGISTRATION BUTTON --- */
+.huge-button {
+    display: inline-block;
+    padding: 20px 40px;
+    background-color: #4fd1c5;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 25px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+    margin: 20px 10px;
+}
+
+.huge-button:hover {
+    background-color: #38a89d;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25), 0 8px 25px 0 rgba(0, 0, 0, 0.22);
+}
+
+.huge-button:active {
+    background-color: #38a89d;
+    transform: translateY(0);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* --- COUNTDOWN --- */
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+    gap: 30px;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown-item span {
+    font-size: 3em;
+    font-weight: bold;
+    /* color: white; */
+}
+
+.countdown-item .label {
+    font-size: 1em;
+    text-transform: uppercase;
+    /* color: white; */
+    margin-top: 5px;
+}
