@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/sympo-info.css">
   <link rel="stylesheet" href="css/section-card.css">
   <link rel="stylesheet" href="css/topic.css">
+  <link rel="stylesheet" href="css/info-block.css">
   <script src="js/counter_script.js" defer></script>
   <script src="js/topic_script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -50,7 +51,7 @@
     <h2>XALQARO TALABALAR SIMPOZIUMI:</h2>
     <h2>Dunyo 2050 yilda</h2>
     <p>Innovatsiyalar, Barqarorlik va Global hamkorlik orqali kelajakni shakllantirish</p>
-    <div class="countdown-container">
+    <!-- <div class="countdown-container">
       <div class="countdown-item">
         <span id="days">0</span>
         <div class="label">Kun</div>
@@ -66,10 +67,10 @@
       <div class="countdown-item">
         <span id="seconds">0</span>
         <div class="label">Soniya</div>
-      </div>
-      <div>
-        <a href="register_uz.html" class="huge-button">Roʻyxatdan oʻting!</a>
-      </div>
+      </div> -->
+    <div>
+      <a href="register_uz.html" class="huge-button">Roʻyxatdan oʻting!</a>
+    </div>
     </div>
     <br>
     <!-- <button onclick="document.querySelector('#about').scrollIntoView({behavior:'smooth'})">
@@ -80,39 +81,54 @@
   <!-- ABOUT -->
   <section id="about" class="about">
     <h2>Symposium haqida</h2>
-    <p>
-      Termiz Iqtisodiyot va xizmat ko‘rsatish universiteti <strong>“Dunyo 2050-yilda”</strong> mavzusidagi xalqaro
-      talabalar simpoziumiga mezbonlik qilishdan g‘ururlanadi, bu esa butun dunyo bo‘ylab yosh ongni oldinda turgan
-      muammolar va imkoniyatlarni o‘rganish uchun birlashtiradi.
-    </p>
-    <br>
-    <p>
-      Biz tobora o'zaro bog'langan va murakkab kelajak sari harakatlanar ekanmiz, ushbu simpozium ilg'or fikrlaydigan
-      talabalar uchun kelgusi 25 yil ichida dunyomizni o'zgartiradigan muammolar bo'yicha tadqiqotlar almashish, fikr
-      almashish va harakatlarni ilhomlantirish uchun platforma yaratadi.
-    </p>
-    <br>
-    <p>
-      Biz barcha fanlardan talabalarni tanqidiy muloqot, ijodiy taqdimotlar va global hamkorlik orqali yaxshiroq ertangi
-      kunni tasavvur qilishda bizga qo'shilishga taklif qilamiz.
-    </p>
-    <br>
-    <p>
-      Tez texnologik transformatsiyalar, atrof-muhit noaniqligi va o'zgaruvchan global dinamika davrida ushbu simpozium
-      yosh olimlar va tadqiqotchilar uchun barqaror, inklyuziv va innovatsion kelajak uchun o'z g'oyalari va
-      qarashlarini taqdim etish uchun platforma taklif qiladi.
-    </p>
-    <br>
-    <p>
-      Tadbir madaniyatlararo almashinuvni, fanlararo muloqotni va insoniyat kelajagiga ta'sir etuvchi real muammolarni
-      hal qiluvchi talabalar tomonidan olib boriladigan tadqiqotlarni rivojlantirishga qaratilgan.
-    </p>
+    <div class="about-container">
+      <div>
+        <p>
+          Termiz Iqtisodiyot va xizmat ko‘rsatish universiteti <strong>“Dunyo 2050-yilda”</strong> mavzusidagi xalqaro
+          talabalar simpoziumiga mezbonlik qilishdan g‘ururlanadi, bu esa butun dunyo bo‘ylab yosh ongni oldinda turgan
+          muammolar va imkoniyatlarni o‘rganish uchun birlashtiradi.
+        </p>
+        <br>
+        <p>
+          Biz tobora o'zaro bog'langan va murakkab kelajak sari harakatlanar ekanmiz, ushbu simpozium ilg'or
+          fikrlaydigan
+          talabalar uchun kelgusi 25 yil ichida dunyomizni o'zgartiradigan muammolar bo'yicha tadqiqotlar almashish,
+          fikr
+          almashish va harakatlarni ilhomlantirish uchun platforma yaratadi.
+        </p>
+        <br>
+        <p>
+          Biz barcha fanlardan talabalarni tanqidiy muloqot, ijodiy taqdimotlar va global hamkorlik orqali yaxshiroq
+          ertangi
+          kunni tasavvur qilishda bizga qo'shilishga taklif qilamiz.
+        </p>
+        <br>
+        <p>
+          Tez texnologik transformatsiyalar, atrof-muhit noaniqligi va o'zgaruvchan global dinamika davrida ushbu
+          simpozium
+          yosh olimlar va tadqiqotchilar uchun barqaror, inklyuziv va innovatsion kelajak uchun o'z g'oyalari va
+          qarashlarini taqdim etish uchun platforma taklif qiladi.
+        </p>
+        <br>
+        <p>
+          Tadbir madaniyatlararo almashinuvni, fanlararo muloqotni va insoniyat kelajagiga ta'sir etuvchi real
+          muammolarni
+          hal qiluvchi talabalar tomonidan olib boriladigan tadqiqotlarni rivojlantirishga qaratilgan.
+        </p>
 
-    <a href="about_uz.html">
-      <button>Ko'proq o'qish</button>
-    </a>
+        <a href="about_uz.html">
+          <button>Ko'proq o'qish</button>
+        </a>
+      </div>
+      
+      <div class="images">
+        <!-- <img src="./assets/images/corridor.JPG"> -->
+        <img src="./assets/images/hall-front.jpg">
+        <img src="./assets/images/hall-back.jpg">
+      </div>
+    </div>
 
-    <div class="symposium-info">
+    <!-- <div class="symposium-info">
       <div class="info-item">
         <span class="icon"><i class="fas fa-calendar-alt"></i></span>
         <div class="text">
@@ -125,6 +141,51 @@
         <div class="text">
           <h3>Manzil</h3>
           <p>Termiz Iqtisodiyot va Servis Universiteti, O‘zbekiston</p>
+        </div>
+      </div>
+    </div> -->
+  </section>
+
+  <section class="info-block">
+    <div class="timer">
+      <div>
+        <div id="days"><strong>00</strong></div>
+        Kun
+      </div>
+      <div>
+        <div id="hours"><strong>00</strong></div>
+        Soat
+      </div>
+      <div>
+        <div id="minutes"><strong>00</strong></div>
+        Minut
+      </div>
+      <div>
+        <div id="seconds"><strong>00</strong></div>
+        Soniya
+      </div>
+    </div>
+
+    <div class="info-boxes">
+      <div class="info-box">
+        <i class="fa fa-calendar"></i>
+        <div class="info-text">
+          <strong>QACHON</strong>
+          Noyabr 21–22, 2025
+        </div>
+      </div>
+      <div class="info-box">
+        <i class="fa fa-calendar-check"></i>
+        <div class="info-text">
+          <strong>RO‘YXATDAN OLISH TUGASHI</strong>
+          Noyabr 01, 2025
+        </div>
+      </div>
+      <div class="info-box" style="flex: 1 1 100%;">
+        <i class="fa fa-map-marker-alt"></i>
+        <div class="info-text">
+          <strong>QAYERDA</strong>
+          Termiz Iqtisodiyot va Servis Universiteti, O‘zbekiston
         </div>
       </div>
     </div>
