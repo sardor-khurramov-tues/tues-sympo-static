@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/sympo-info.css">
   <link rel="stylesheet" href="css/section-card.css">
   <link rel="stylesheet" href="css/topic.css">
+  <link rel="stylesheet" href="css/info-block.css">
   <script src="js/counter_script.js" defer></script>
   <script src="js/topic_script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -51,7 +52,7 @@
     <h2>The World in 2050</h2>
     <p>Shaping the future through Innovation, Sustainability and Global Collaboration</p>
     <div class="countdown-container">
-      <div class="countdown-item">
+      <!-- <div class="countdown-item">
         <span id="days">0</span>
         <div class="label">Days</div>
       </div>
@@ -66,7 +67,7 @@
       <div class="countdown-item">
         <span id="seconds">0</span>
         <div class="label">Secs</div>
-      </div>
+      </div> -->
       <div>
         <a href="register_en.html" class="huge-button">Register Now!</a>
       </div>
@@ -80,39 +81,51 @@
   <!-- ABOUT -->
   <section id="about" class="about">
     <h2>About the Symposium</h2>
-    <p>
-      Termez University of Economics and Service is proud to host an international student symposium titled <strong>"The
-        World in 2050"</strong> a dynamic event bringing together young minds from across the globe to explore the
-      challenges and opportunities that lie ahead.
-    </p>
-    <br>
-    <p>
-      As we move toward an increasingly interconnected and complex future, this symposium provides a platform for
-      forward-thinking students to share research, exchange ideas, and inspire action on the issues that will transform
-      our world over the next 25 years.
-    </p>
-    <br>
-    <p>
-      We invite students from all disciplines to join us in envisioning a better tomorrow, through critical dialogue,
-      creative presentations, and global collaboration.
-    </p>
-    <br>
-    <p>
-      In an age of rapid technological transformation, environmental uncertainty, and shifting global dynamics, this
-      symposium offers a platform for young scholars and researchers to contribute their ideas and visions for a
-      sustainable, inclusive, and innovative future.
-    </p>
-    <br>
-    <p>
-      The event aims to foster cross-cultural exchange, interdisciplinary dialogue, and student-led research that
-      addresses real-world issues affecting the future of humanity.
-    </p>
+    <div class="about-container">
+      <div>
+        <p>
+          Termez University of Economics and Service is proud to host an international student symposium titled
+          <strong>"The
+            World in 2050"</strong> a dynamic event bringing together young minds from across the globe to explore the
+          challenges and opportunities that lie ahead.
+        </p>
+        <br>
+        <p>
+          As we move toward an increasingly interconnected and complex future, this symposium provides a platform for
+          forward-thinking students to share research, exchange ideas, and inspire action on the issues that will
+          transform
+          our world over the next 25 years.
+        </p>
+        <br>
+        <p>
+          We invite students from all disciplines to join us in envisioning a better tomorrow, through critical
+          dialogue,
+          creative presentations, and global collaboration.
+        </p>
+        <br>
+        <p>
+          In an age of rapid technological transformation, environmental uncertainty, and shifting global dynamics, this
+          symposium offers a platform for young scholars and researchers to contribute their ideas and visions for a
+          sustainable, inclusive, and innovative future.
+        </p>
+        <br>
+        <p>
+          The event aims to foster cross-cultural exchange, interdisciplinary dialogue, and student-led research that
+          addresses real-world issues affecting the future of humanity.
+        </p>
 
-    <a href="about_en.html">
-      <button>Read More</button>
-    </a>
+        <a href="about_en.html">
+          <button>Read More</button>
+        </a>
+      </div>
+      <div class="images">
+        <!-- <img src="./assets/images/corridor.JPG"> -->
+        <img src="./assets/images/hall-front.jpg">
+        <img src="./assets/images/hall-back.jpg">
+      </div>
+    </div>
 
-    <div class="symposium-info">
+    <!-- <div class="symposium-info">
       <div class="info-item">
         <span class="icon"><i class="fas fa-calendar-alt"></i></span>
         <div class="text">
@@ -125,6 +138,51 @@
         <div class="text">
           <h3>Location</h3>
           <p>Termez University of Economics and Service, Uzbekistan</p>
+        </div>
+      </div>
+    </div> -->
+  </section>
+
+  <section class="info-block">
+    <div class="timer">
+      <div>
+        <div id="days"><strong>00</strong></div>
+        Days
+      </div>
+      <div>
+        <div id="hours"><strong>00</strong></div>
+        Hours
+      </div>
+      <div>
+        <div id="minutes"><strong>00</strong></div>
+        Minutes
+      </div>
+      <div>
+        <div id="seconds"><strong>00</strong></div>
+        Seconds
+      </div>
+    </div>
+
+    <div class="info-boxes">
+      <div class="info-box">
+        <i class="fa fa-calendar"></i>
+        <div class="info-text">
+          <strong>WHEN</strong>
+          Nov 21–22, 2025
+        </div>
+      </div>
+      <div class="info-box">
+        <i class="fa fa-calendar-check"></i>
+        <div class="info-text">
+          <strong>REGISTRATION DEADLINE</strong>
+          Nov 01, 2025
+        </div>
+      </div>
+      <div class="info-box" style="flex: 1 1 100%;">
+        <i class="fa fa-map-marker-alt"></i>
+        <div class="info-text">
+          <strong>WHERE</strong>
+          Termez University of Economics and Service, Uzbekistan
         </div>
       </div>
     </div>

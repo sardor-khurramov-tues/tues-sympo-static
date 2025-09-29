@@ -1,4 +1,11 @@
 /* --- ABOUT PAGE --- */
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+}
+
 .about {
     padding-top: 120px;
 }
@@ -21,4 +28,16 @@
 
 .about li {
     padding: 5px;
+}
+
+.images {
+    padding: 0 40px;
+    gap: 20px;
+}
+
+.images img {
+    margin: 20px 0;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 5px;
 }
