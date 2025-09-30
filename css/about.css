@@ -13,6 +13,7 @@
 .about h3 {
     padding: 10px 30px;
     font-size: 30px;
+    text-align: center;
 }
 
 .about h4 {
@@ -38,6 +39,10 @@
 .images img {
     margin: 20px 0;
     width: 100%;
-    max-width: 420px;
+    width: 600px;
     border-radius: 5px;
+}
+
+.about p {
+    font-size: 16px;
 }
