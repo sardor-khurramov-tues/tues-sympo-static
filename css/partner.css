@@ -1,0 +1,19 @@
+/* --- PARTNERS --- */
+.partners {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.partners img {
+    margin: 20px 0;
+    padding: 0 40px;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.partners h3 {
+    padding: 10px 30px;
+    font-size: 20px;
+    text-align: center;
+}
