@@ -1,9 +1,12 @@
 /* --- ABOUT PAGE --- */
 .about-container {
-    display: flex;
+    /* display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 20px;
+    padding: 20px; */
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .about {
@@ -34,12 +37,12 @@
 .images {
     padding: 0 40px;
     gap: 20px;
+    align-self: center;
 }
 
 .images img {
     margin: 20px 0;
-    width: 100%;
-    width: 600px;
+    max-width: 100%;
     border-radius: 5px;
 }
 

@@ -16,8 +16,13 @@
 }
 
 .timer div {
+    margin: 5px;
     font-size: 32px;
     color: #38a89d;
+}
+
+.info-block p {
+    font-size: 20px;
 }
 
 .info-boxes {
