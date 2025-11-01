@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registratsiya - Dunyo 2050 yilda</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/register.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="assets/logos/logo.ico">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header>
+    <h1>Dunyo 2050 yilda</h1>
+    <nav>
+      <ul>
+        <li><a href="index_uz.html">Bosh sahifa</a></li>
+        <li><a href="about_uz.html">Haqida</a></li>
+        <li><a href="register_uz.html">Registratsiya</a></li>
+        <li class="language-selector">
+          <a href="#">
+            <img src="./assets/images/flag_uz.png" alt="English" class="flag-icon" />
+          </a>
+          <ul class="dropdown">
+            <li>
+              <a href="index.html">
+                <img src="./assets/images/flag_uk.png" alt="Oʻzbekcha" class="flag-icon" />
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- REGISTER -->
+  <section id="register" class="register">
+    <h3>Registratsiya</h3>
+
+    <form id="attendeeForm">
+      <label for="firstName">Ism:</label>
+      <input type="text" id="firstName" name="firstName" required maxlength="63">
+
+      <label for="lastName">Familiya:</label>
+      <input type="text" id="lastName" name="lastName" required maxlength="63">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required maxlength="127">
+
+      <label for="birthDate">Tug'ilgan sana:</label>
+      <input type="date" id="birthDate" name="birthDate" required>
+
+      <label for="country">Mamlakat:</label>
+      <input type="text" id="country" name="country" required maxlength="127">
+
+      <label for="university">Universitet:</label>
+      <input type="text" id="university" name="university" required maxlength="255">
+
+      <label for="degree">Ilmiy daraja:</label>
+      <input type="text" id="degree" name="degree" required maxlength="31">
+
+      <label for="field">O'qish sohasi:</label>
+      <input type="text" id="field" name="field" required maxlength="127">
+
+      <label for="photo">Rasm:</label>
+      <input type="file" id="photo" name="photo" accept=".jpeg, .jpg" required>
+
+      <label for="presTitle">Taqdimot nomi (ixtiyoriy):</label>
+      <input type="text" id="presTitle" name="presTitle" maxlength="127">
+
+      <label for="presAbstract">Taqdimot abstrakti (ixtiyoriy):</label>
+      <textarea id="presAbstract" name="presAbstract" rows="5" cols="40" maxlength="2000"></textarea>
+
+      <label for="comments">Izohlar (ixtiyoriy):</label>
+      <textarea id="comments" name="comments" rows="5" cols="40" maxlength="2000"></textarea>
+
+      <input type="hidden" name="recaptchaToken" id="recaptchaToken">
+
+      <button type="submit">Kiritish</button>
+    </form>
+  </section>
+  <br><br>
+
+  <script src="https://www.google.com/recaptcha/api.js?render=6Lf4nNMrAAAAAPXzkOJQSdaYrzC0LCzqxulT1RqS"></script>
+  <script>
+    const form = document.getElementById('attendeeForm');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+
+      const messages = {
+        0: "✅ Roʻyxatdan oʻtish muvaffaqiyatli amalga oshdi!",
+        1: "⚠️ Biz tomonda nimadir noto'g'ri ketdi. Keyinroq qayta urinib ko‘ring.",
+        6: "❌ Fayl juda katta. Maksimal hajmi 5 MB.",
+        7: "❌ Fayl turi yaroqsiz. Iltimos, JPEG/JPG rasm yuklang.",
+        1001: "⚠️ Ushbu email allaqachon ro'yxatdan o'tkazilgan. Iltimos, boshqasini ishlating."
+      };
+
+      grecaptcha.ready(async () => {
+        try {
+          const token = await grecaptcha.execute(
+            '6Lf4nNMrAAAAAPXzkOJQSdaYrzC0LCzqxulT1RqS',
+            { action: 'attendeeForm' }
+          );
+
+          document.getElementById('recaptchaToken').value = token;
+
+          const formData = new FormData(form);
+
+          const response = await fetch('https://sympo.tues.uz/api/attendee', {
+            method: 'POST',
+            body: formData,
+          });
+
+          const result = await response.json();
+          const message = messages[result.code] || "Xatolik yuz berdi. Keyinroq qayta urinib ko‘ring.";
+          alert(message);
+
+        } catch (error) {
+          console.error('Submission failed:', error);
+          alert('Xatolik yuz berdi. Keyinroq qayta urinib ko‘ring.');
+        }
+      });
+    });
+  </script>
+
+  <!-- FOOTER -->
+  <footer>
+    <h3>© 2025 The World in 2050 Symposium. All Rights Reserved.</h3>
+    <div class="social-links">
+      <h3>Bizni kuzatib boring:</h3>
+      <a href="https://m.facebook.com/groups/1309075593063716/?ref=share&mibextid=S66gvF" target="_blank"
+        class="social-icon facebook"></a>
+      <a href="https://instagram.com/tisu.uz?igshid=YmMyMTA2M2Y=" target="_blank" class="social-icon instagram"></a>
+      <a href="https://t.me/tisu_2022" target="_blank" class="social-icon telegram"></a>
+      <a href="https://youtube.com/@termiz_isu" target="_blank" class="social-icon youtube"></a>
+    </div>
+  </footer>
+</body>
+
+</html>

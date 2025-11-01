@@ -40,3 +40,17 @@
 .register button:hover {
     background: #38a89d;
 }
+
+.register-finished {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.register-finished h4 {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-size: 40px;
+    text-align: center;
+}

@@ -42,93 +42,12 @@
   <!-- REGISTER -->
   <section id="register" class="register">
     <h3>Registration</h3>
-
-    <form id="attendeeForm">
-      <label for="firstName">First Name:</label>
-      <input type="text" id="firstName" name="firstName" required maxlength="63">
-
-      <label for="lastName">Last Name:</label>
-      <input type="text" id="lastName" name="lastName" required maxlength="63">
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required maxlength="127">
-
-      <label for="birthDate">Date of Birth:</label>
-      <input type="date" id="birthDate" name="birthDate" required>
-
-      <label for="country">Country:</label>
-      <input type="text" id="country" name="country" required maxlength="127">
-
-      <label for="university">University:</label>
-      <input type="text" id="university" name="university" required maxlength="255">
-
-      <label for="degree">Degree:</label>
-      <input type="text" id="degree" name="degree" required maxlength="31">
-
-      <label for="field">Field of Study:</label>
-      <input type="text" id="field" name="field" required maxlength="127">
-
-      <label for="photo">Photo:</label>
-      <input type="file" id="photo" name="photo" accept=".jpeg, .jpg" required>
-
-      <label for="presTitle">Presentation Title (Optional):</label>
-      <input type="text" id="presTitle" name="presTitle" maxlength="127">
-
-      <label for="presAbstract">Presentation Abstract (Optional):</label>
-      <textarea id="presAbstract" name="presAbstract" rows="5" cols="40" maxlength="2000"></textarea>
-
-      <label for="comments">Comments (Optional):</label>
-      <textarea id="comments" name="comments" rows="5" cols="40" maxlength="2000"></textarea>
-
-      <input type="hidden" name="recaptchaToken" id="recaptchaToken">
-
-      <button type="submit">Register</button>
-    </form>
+    <div class="register-finished">
+      <h4>Registration is finished</h4>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
   </section>
   <br><br>
-
-  <script src="https://www.google.com/recaptcha/api.js?render=6Lf4nNMrAAAAAPXzkOJQSdaYrzC0LCzqxulT1RqS"></script>
-  <script>
-    const form = document.getElementById('attendeeForm');
-
-    form.addEventListener('submit', async (event) => {
-      event.preventDefault();
-
-      const messages = {
-        0: "✅ Your registration was successful!",
-        1: "⚠️ Something went wrong on our side. Please try again later.",
-        6: "❌ File too large. Maximum size is 5 MB.",
-        7: "❌ Invalid file type. Please upload a JPEG/JPG image.",
-        1001: "⚠️ This email is already registered. Please use another one."
-      };
-
-      grecaptcha.ready(async () => {
-        try {
-          const token = await grecaptcha.execute(
-            '6Lf4nNMrAAAAAPXzkOJQSdaYrzC0LCzqxulT1RqS',
-            { action: 'attendeeForm' }
-          );
-
-          document.getElementById('recaptchaToken').value = token;
-
-          const formData = new FormData(form);
-
-          const response = await fetch('https://sympo.tues.uz/api/attendee', {
-            method: 'POST',
-            body: formData,
-          });
-
-          const result = await response.json();
-          const message = messages[result.code] || "An error occurred. Please try again later.";
-          alert(message);
-
-        } catch (error) {
-          console.error('Submission failed:', error);
-          alert('An error occurred. Please try again later.');
-        }
-      });
-    });
-  </script>
 
   <!-- FOOTER -->
   <footer>
